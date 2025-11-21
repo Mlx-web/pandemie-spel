@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scenario 2 — De pandemie is een feit</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+background-color: #f5cfa3;      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* Scenario links, rollen rechts */
+    .main-row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1300px;
+    }
+
+    /* Scenario-blok */
+    .scenario-card {
+      background: #f7f7f7;
+      border-left: 6px solid #e28b28; /* oranje accent */
+      width: 850px;
+      max-width: 100%;
+      padding: 24px 22px 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Rollenkaart */
+    .roles-card {
+      background: #f7f7f7;
+      width: 420px;
+      max-width: 100%;
+      padding: 18px 18px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #e28b28; /* oranje accent */
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: left;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .roles-card p strong {
+      font-size: 16px;
+    }
+
+    /* Knoppen */
+    .role-btn,
+    .spelleider-btn {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      width: 100%;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .role-btn {
+      background-color: #e28b28; /* warm oranje */
+    }
+
+    .role-btn:hover {
+      background-color: #b96d20; /* donkerdere oranje */
+    }
+
+    .spelleider-btn {
+      background-color: #555555; 
+    }
+
+    .spelleider-btn:hover {
+      background-color: #bf5b5b;
+    }
+
+    /* Navigatieblok */
+    .nav-card {
+      background: #e28b28; /* oranje */
+      width: 850px;
+      max-width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .back-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .back-button {
+      flex: 1;
+      background-color: #555;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<!-- SCENARIO + ROLLEN -->
+<div class="main-row">
+
+  <!-- Scenario -->
+  <div class="scenario-card">
+    <h1>Scenario 2 — De pandemie is een feit</h1>
+
+    <p>
+      De WHO heeft geconstateerd dat de wereldwijde verspreiding van de N19H17-influenza
+      voldoende ernstig is en een grote impact heeft. De pandemie is een feit.
+    </p>
+
+    <p>
+      Dan wordt het eerste geval in Nederland geconstateerd. In een gezin dat terugkwam van
+      een reis naar Azië wordt het virus vastgesteld. De GGD doet bron- en contactonderzoek.
+      Op het jeugdjournaal is te zien dat het gezin in quarantaine moet. De directeur van het
+      RIVM geeft uitleg en probeert kalmte uit te stralen en paniek te voorkomen. De eerste
+      persconferentie van de minister-president is aangekondigd.
+    </p>
+
+    <p style="margin-bottom:4px;"><em>Nieuwe casusdefinitie verdacht geval</em>:</p>
+
+    <ul style="margin-top:4px; line-height:1.4;">
+      <li>Patiënt met luchtwegklachten én koorts (minimaal 38°C).</li>
+    </ul>
+  </div>
+
+  <!-- Rollen -->
+  <div class="roles-card">
+    <p><strong>Kies je rol:</strong></p>
+
+    <button class="role-btn" onclick="window.location.href='huisarts.html'">Huisarts</button>
+    <button class="role-btn" onclick="window.location.href='hap.html'">HAP-arts</button>
+    <button class="role-btn" onclick="window.location.href='ziekenhuis.html'">Ziekenhuisarts</button>
+    <button class="role-btn" onclick="window.location.href='ggd.html'">Arts infectieziektenbestrijding</button>
+    <button class="spelleider-btn" onclick="window.location.href='spelleider.html'">Factorkaarten voor de spelleider</button>
+  </div>
+
+</div>
+
+<!-- Navigatie -->
+<div class="nav-card">
+  <div class="back-row">
+    <button class="back-button" onclick="window.location.href='scenario1.html'">Terug naar scenario 1</button>
+    <button class="back-button" onclick="window.location.href='scenario3.html'">Door naar scenario 3</button>
+  </div>
+</div>
+
+</body>
+</html>

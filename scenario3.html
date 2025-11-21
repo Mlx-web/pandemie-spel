@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scenario 3 — Crisis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0ac7c; /* warme oranje achtergrond */
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .main-row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1300px;
+    }
+
+    .scenario-card {
+      background: #f7f7f7;
+      border-left: 6px solid #d65b4f; /* zachte warme roodtint */
+      width: 850px;
+      max-width: 100%;
+      padding: 24px 22px 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .roles-card {
+      background: #f7f7f7;
+      width: 420px;
+      max-width: 100%;
+      padding: 18px 18px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #d65b4f;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: left;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .role-btn,
+    .spelleider-btn {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      width: 100%;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .role-btn {
+      background-color: #d65b4f;
+    }
+
+    .role-btn:hover {
+      background-color: #b0483f;
+    }
+
+    .spelleider-btn {
+      background-color: #555555;
+    }
+
+    .spelleider-btn:hover {
+      background-color: #444444;
+    }
+
+    .nav-card {
+      background: #d65b4f;
+      width: 850px;
+      max-width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .back-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .back-button {
+      flex: 1;
+      background-color: #555;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-row">
+
+  <div class="scenario-card">
+    <h1>Scenario 3 — Crisis</h1>
+
+    <p>
+      Op een school dichtbij zijn er op een dag een tiental kinderen ziek geworden.
+      De schooldirecteur heeft contact gehad met de GGD en heeft besloten de school tot nader orde te sluiten.
+    </p>
+
+    <p>
+      Intussen klinken vanuit het buitenland onthutsende berichten. Het H19N17-virus geeft een mortaliteit tot wel 8%.
+      Zeer verontrustend is dat veel kinderen van 4 tot 10 jaar ziek worden en zelfs overlijden.
+      Ouders van de zieke en nog niet zieke kinderen bellen massaal met de huisarts.
+    </p>
+
+    <p>
+      De zorg raakt overbelast: er zijn personeelstekorten (mede door isolatiemaatregelen bij besmet personeel)
+      en in verschillende ziekenhuizen is een tekort aan IC-bedden.
+    </p>
+
+    <p>
+      Het land verkeert, net als grote delen van de wereld, in crisis. Maatschappelijk heerst grote onrust.
+      Op straat breken rellen uit. De ME wordt ingezet om de orde te handhaven.
+    </p>
+
+    <p><em>Focus bij dit scenario: crisisbeheer.</em></p>
+  </div>
+
+  <div class="roles-card">
+    <p><strong>Kies je rol:</strong></p>
+
+    <button class="role-btn" onclick="window.location.href='huisarts.html'">Huisarts</button>
+    <button class="role-btn" onclick="window.location.href='hap.html'">HAP-arts</button>
+    <button class="role-btn" onclick="window.location.href='ziekenhuis.html'">Ziekenhuisarts</button>
+    <button class="role-btn" onclick="window.location.href='ggd.html'">Arts infectieziektenbestrijding</button>
+    <button class="spelleider-btn" onclick="window.location.href='spelleider.html'">
+      Factorkaarten voor de spelleider
+    </button>
+  </div>
+
+</div>
+
+<div class="nav-card">
+  <div class="back-row">
+    <button class="back-button" onclick="window.location.href='scenario2.html'">Terug naar scenario 2</button>
+    <button class="back-button" onclick="window.location.href='scenario4.html'">Door naar scenario 4</button>
+  </div>
+</div>
+
+</body>
+</html>

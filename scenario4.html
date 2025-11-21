@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scenario 4 — Vaccinatiecampagne voorbereiden</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5cfa3; /* mild oranje, zoals Scenario 2 */
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .main-row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1300px;
+    }
+
+    /* Scenario-blok */
+    .scenario-card {
+      background: #f7f7f7;
+      border-left: 6px solid  #e28b28; /* warm oranje */
+      width: 850px;
+      max-width: 100%;
+      padding: 24px 22px 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Rollenkaart */
+    .roles-card {
+      background: #f7f7f7;
+      width: 420px;
+      max-width: 100%;
+      padding: 18px 18px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid  #e28b28; /* warm oranje */
+
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: left;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    /* Knoppen */
+    .role-btn,
+    .spelleider-btn {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      width: 100%;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .role-btn {
+      background-color: #e28b28; /* warm oranje */
+    }
+
+    .role-btn:hover {
+      background-color: #e28b28; /* warm oranje */
+
+    }
+
+    .spelleider-btn {
+      background-color: #555555;
+    }
+
+    .spelleider-btn:hover {
+      background-color: #444444;
+    }
+
+    /* Navigatieblok */
+    .nav-card {
+      background: #e28b28; /* oranje */
+      width: 850px;
+      max-width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .back-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .back-button {
+      flex: 1;
+      background-color: #555;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-row">
+
+  <div class="scenario-card">
+    <h1>Scenario 4 — Vaccinatiecampagne voorbereiden</h1>
+
+    <p>
+      Lees het scenario voor en laat de deelnemers stoeien.
+    </p>
+
+    <p>
+      Er is een vaccin ontwikkeld dat zorgt voor een belangrijke reductie in het aantal
+      ziekenhuisopnames en mortaliteit. Het is een vaccin dat tweemaal gegeven moet worden
+      (met 2 maanden ertussen) voor een optimaal resultaat.
+    </p>
+
+    <p>
+      Er wordt door eerdere ervaringen gekozen om de vaccinatiecampagne door de GGD te laten
+      uitvoeren. De risicogroepen en medewerkers van essentiële beroepen worden als eerst geselecteerd.
+    </p>
+
+    <p><em>Focus bij dit scenario: voorbereiden op een soepel lopende vaccinatiecampagne.</em></p>
+  </div>
+
+  <div class="roles-card">
+    <p><strong>Kies je rol:</strong></p>
+
+    <button class="role-btn" onclick="window.location.href='huisarts.html'">Huisarts</button>
+    <button class="role-btn" onclick="window.location.href='hap.html'">HAP-arts</button>
+    <button class="role-btn" onclick="window.location.href='ziekenhuis.html'">Ziekenhuisarts</button>
+    <button class="role-btn" onclick="window.location.href='ggd.html'">Arts infectieziektenbestrijding</button>
+    <button class="spelleider-btn" onclick="window.location.href='spelleider.html'">
+      Factorkaarten voor de spelleider
+    </button>
+  </div>
+
+</div>
+
+<div class="nav-card">
+  <div class="back-row">
+    <button class="back-button" onclick="window.location.href='scenario3.html'">Terug naar scenario 3</button>
+    <button class="back-button" onclick="window.location.href='scenario5.html'">Door naar scenario 5</button>
+  </div>
+</div>
+
+</body>
+</html>

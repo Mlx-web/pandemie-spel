@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pandemie Scenario Spel</title>
+
+    <!-- Mooier lettertype -->
+    <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+
+   <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #dbe7f0; /* zachte lichtblauwe achtergrond */
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .card {
+    background: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4a8fd1;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: #3c7db5;
+  }
+</style>
+
+
+  </head>
+<body>
+
+  <div class="card">
+    <h1>Welkom in het pandemie-scenario-spel</h1>
+
+    <img src="afb1virus.png" alt="Virus">
+
+  <button onclick="window.location.href='uitleg.html'">Speluitleg</button>
+    <br><br>
+<button onclick="window.location.href='scenario1.html'">Start het spel</button>
+  </div>
+
+  <script>
+    function toonUitleg() {
+      alert("In dit spel maak je keuzes tijdens een pandemie. Elke keuze heeft gevolgen!");
+    }
+
+    function startSpel() {
+      alert("Het spel begint! (We kunnen dit later vervangen door de eerste scène.)");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scenario 1 — Wordt het een pandemie?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1dea3; /* warm zandgeel voor Scenario 1 */
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* Rij met scenario links en rollen rechts */
+    .main-row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1300px;
+    }
+
+    /* Scenario-blok */
+    .scenario-card {
+      background: #f7f7f7; /* zacht lichtgrijs */
+      border-left: 6px solid #f2b443; /* gele accentlijn */
+      width: 850px;
+      max-width: 100%;
+      padding: 24px 22px 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* uniforme schaduw */
+    }
+
+    /* Rechterkolom met rollen */
+    .roles-card {
+      background: #f7f7f7;              /* zacht grijs voor rust */
+      width: 420px;
+      max-width: 100%;
+      padding: 18px 18px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* zelfde schaduw als scenario */
+      border-left: 6px solid #f2b443;   /* accent in rol-kleur */
+          }
+
+    h1 {
+      font-size: 22px;
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: left;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .roles-card p strong {
+      font-size: 16px;
+    }
+
+    .role-btn,
+    .spelleider-btn {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      width: 100%;
+      margin-top: 12px;        /* meer ruimte tussen knoppen */
+      text-align: center;
+    }
+
+    .role-btn {
+      background-color: #f2b443; /* warm okergeel */
+    }
+
+    .role-btn:hover {
+      background-color: #b08f3d;
+    }
+
+    .spelleider-btn {
+      background-color: #555555;
+    }
+
+    .spelleider-btn:hover {
+      background-color: #bf5b5b;
+    }
+
+    /* Navigatieblok onderaan */
+    .nav-card {
+      background: #f2b443;
+      width: 850px;
+      max-width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* zelfde schaduw */
+    }
+
+    .back-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .back-button {
+      flex: 1;
+      background-color: #555555;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #444444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCENARIO + ROLLEN NAAST ELKAAR -->
+  <div class="main-row">
+
+    <div class="scenario-card">
+      <h1>Scenario 1 — Wordt het een pandemie?</h1>
+
+      <p>
+        Er is een mondiale uitbraak van een influenzavirus H19N17 met pandemisch potentieel.
+        Er zijn al gevallen in meerdere landen op meerdere continenten. Ook in Europa zijn
+        in Groot-Brittannië, Frankrijk en Italië enkele casusgevallen vastgesteld.
+        Er is nog veel onbekend over het virus, de symptomen en de mortaliteit.
+        De WHO heeft alarm geslagen. Nederland staat paraat.
+      </p>
+
+      <p>
+        Deze gebeurtenis valt samen met de jaarlijkse seizoensgriep en huisartsen zien
+        daardoor veel griepgevallen. De vraag die overal speelt is:
+        “Krijgen we een pandemie?”
+      </p>
+
+      <p>
+        Het NHG heeft waarschuwingen verspreid om extra voorzichtig te zijn bij patiënten
+        met verschijnselen van luchtweginfectie die afkomstig zijn uit de brongebieden.
+     <p>
+<div style="margin-bottom: 26px;"></div>
+<p style="margin-bottom:4px;">
+  <em>Casusdefinitie verdacht geval (H19N17)</em>:
+</p>
+
+<ul style="margin-top:4px; line-height:1.4;">
+  <li>luchtwegklachten én koorts (minimaal 38 °C),</li>
+  <li>én in de 30 dagen vóór de eerste ziektedag in een influenza H19N17-endemisch gebied geweest,</li>
+  <li>én contact gehad met een waarschijnlijke of bevestigde H19N17-patiënt.</li>
+</ul>
+</div>
+
+    <div class="roles-card">
+      <p><strong>Kies je rol:</strong></p>
+
+      <button class="role-btn" onclick="window.location.href='huisarts.html'">Huisarts</button>
+      <button class="role-btn" onclick="window.location.href='hap.html'">HAP-arts</button>
+      <button class="role-btn" onclick="window.location.href='ziekenhuis.html'">Ziekenhuisarts</button>
+      <button class="role-btn" onclick="window.location.href='ggd.html'">Arts infectieziektenbestrijding</button>
+      <button class="spelleider-btn" onclick="window.location.href='spelleider.html'">Factorkaarten voor de spelleider</button>
+    </div>
+
+  </div>
+
+  <!-- NAVIGATIEBLOK ONDERAAN -->
+  <div class="nav-card">
+    <div class="back-row">
+      <button class="back-button" onclick="window.location.href='index.html'">Terug naar startpagina</button>
+      <button class="back-button" onclick="window.location.href='scenario2.html'">Door naar scenario 2</button>
+    </div>
+  </div>
+
+</body>
+</html>

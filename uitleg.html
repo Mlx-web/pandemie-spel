@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Speluitleg</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #dbe7f0;
+margin: 0;
+padding: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+
+
+/* Klein hoofd-kadertje bovenaan */
+.main-info {
+background: #f2f2f2; /* koel lichtgrijs voor rust */
+width: 420px;
+max-width: 90%;
+padding: 16px 20px;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+
+.small-cards-container {
+display: flex;
+gap: 20px;
+justify-content: center;
+width: 100%;
+flex-wrap: wrap;
+}
+
+
+.subcard {
+background: #f2f2f2; /* koel lichtgrijs voor rust */
+border-left: 6px solid #4a8fd1; /* subtiele accentkleur */
+padding: 16px;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* lichte schaduw voor diepte */
+width: 320px;
+text-align: left;
+}
+
+
+h1 {
+font-size: 20px;
+margin: 0 0 10px 0;
+}
+
+
+h2 {
+font-size: 18px;
+margin-top: 0;
+}
+
+
+ul {
+padding-left: 20px;
+margin: 10px 0;
+}
+
+
+button {
+padding: 10px 15px;
+font-size: 16px;
+cursor: pointer;
+background-color: #4a8fd1;
+border: none;
+color: white;
+border-radius: 8px;
+width: 200px;
+margin-top: 20px;
+}
+
+
+button:hover {
+background-color: #3c7db5;
+}
+</style>
+</head>
+<body>
+
+  <!-- Hoofd klein kadertje -->
+<div class="main-info" style="display: flex; align-items: center; justify-content: flex-start; gap: 15px; text-align: left;">
+    
+    <img src="afb1virus.png"
+         alt="Virus"
+         style="width: 90px; height: auto; border-radius: 6px;">
+
+    <div style="flex: 1;">
+        <h1>Speluitleg</h1>
+        <p style="text-align: left;">
+            Het pandemie-spel bestaat uit 5 scenario’s die je samen als team doorloopt.
+            In elk scenario verandert de situatie en reageert het team daarop.
+        </p>
+    </div>
+
+</div>
+
+  <!-- Twee losse kaders links en rechts -->
+  <div class="small-cards-container">
+
+    <div class="subcard">
+      <h2>Het team</h2>
+      <p>Verdeel onderling de rollen:</p>
+      <ul>
+        <li>Huisarts</li>
+        <li>SEH-arts (speelt ook het ziekenhuis)</li>
+        <li>HAP-arts (speelt ook de HAP-organisatie)</li>
+        <li>Arts infectieziektenbestrijding (speelt ook GGD/ RIVM/ OMT)</li>
+      </ul>
+      <p>In elk scenario denkt elke speler na over:</p>
+      <ul style="list-style-type: '- ';">
+        <li>Wat is jouw taak?</li>
+        <li>Wat staat jou te doen?</li>
+        <li>Wat zijn aandachtspunten voor jou?</li>
+        <li>Hoe overleg je met de anderen?</li>
+      </ul>
+    </div>
+
+    <div class="subcard">
+      <h2>De spelleider</h2>
+      <p>De spelleider leest steeds het scenario voor. Zo leid je het team door de het spel. Zorg dat elk teamlid bijdraagt in de verschillende scenario's.</p>
+      <p><strong>Factor-kaarten</strong></p>
+      <p>Als spelleider kun je tijdens elk scenario op een gewenst moment één of meerdere factor-kaarten inzetten. Met een factorkaart verandert de situatie soms in positieve en soms in negatieve zin.</p>
+    </div>
+
+  </div>
+
+  <button onclick="window.location.href='index.html'">Terug naar start</button>
+
+</body>
+</html>
