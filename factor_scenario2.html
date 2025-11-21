@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scenario 2 — Factorkaarten</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eceff1; /* rustige lichtgrijze achtergrond */
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+    }
+
+    /* Bovenste witte info-blok */
+    .intro-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 900px;
+      padding: 20px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+      border-left: 6px solid #4a8fd1; /* subtiele blauwe lijn */
+    }
+
+    .intro-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-title {
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .intro-paragraph {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .intro-image {
+      width: 90px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 12px; /* afgeronde hoeken */
+    }
+
+    /* Grid met factorkaarten */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card {
+      background: #f7f7f7;
+      padding: 18px 18px 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #cccccc;  /* neutraal */
+    }
+
+    .card-header {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .card-header span.nr {
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    .pos {
+      border-left-color: #6abf69; /* zacht groen */
+      background: #f1faf1;
+    }
+
+    .neg {
+      border-left-color: #d65b4f; /* zacht rood */
+      background: #fff5f4;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    /* Navigatieblok */
+    .nav-card {
+      margin-top: 30px;
+      background: #C0C0C0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    }
+
+    .back-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .back-button {
+      flex: 1;
+      background-color: #555;
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Intro-blok -->
+<div class="intro-card">
+  <div class="intro-content">
+    <div class="intro-text">
+      <h1 class="intro-title">Scenario 2 — Factorkaarten</h1>
+      <p class="intro-paragraph">
+        Als het team het scenario heeft doorgespeeld, kun je het scenario veranderen met één of 
+        meer van onderstaande factorkaarten. Kies zelf welke kaart je inzet, of gooi de dobbelsteen voor een willekeurige kaart.
+      </p>
+    </div>
+    <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
+  </div>
+</div>
+
+<!-- Grid met 6 kaarten -->
+<div class="grid">
+
+  <!-- Kaart 1 -->
+  <div class="card pos">
+    <div class="card-header">
+      <span class="nr">1.</span> Landelijke steun en applaus
+    </div>
+    <p>
+      Elke dinsdagavond om 19u applaudisseert Nederland voor haar zorgverleners. Er zijn programma’s 
+      op de TV over zorgverleners in deze pandemie met titels als “Helden in de frontlinie”.
+    </p>
+  </div>
+
+  <!-- Kaart 2 -->
+  <div class="card pos">
+    <div class="card-header">
+      <span class="nr">2.</span> Richtlijnen en handreikingen
+    </div>
+    <p>
+      De LHV verspreidt handreikingen voor het aanpassen van de praktijkorganisatie. Het NHG brengt 
+      via versnelde richtlijnontwikkeling een voorlopige N19H17-standaard uit.
+    </p>
+  </div>
+
+  <!-- Kaart 3 -->
+  <div class="card pos">
+    <div class="card-header">
+      <span class="nr">3.</span> Focus op hygiëne
+    </div>
+    <p>
+      De overdracht van het virus gaat met name door contact via oppervlakten. Hygiënemaatregelen 
+      hebben daarmee een belangrijke rol om de verspreiding in te dammen.
+    </p>
+  </div>
+
+  <!-- Kaart 4 -->
+  <div class="card pos">
+    <div class="card-header">
+      <span class="nr">4.</span> Gemeenschap en onderlinge hulp
+    </div>
+    <p>
+      Gemeenschappen mobiliseren elkaar te helpen, zoals het rondbrengen van voedselpakketten en het 
+      ophalen van medicatie voor elkaar.
+    </p>
+  </div>
+
+  <!-- Kaart 5 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">5.</span> Schadelijke behandelingen
+    </div>
+    <p>
+      Onjuiste informatie over medische behandeling leidt internationaal en ook in Nederland tot problemen. Een huisarts in de regionale zorggroep heeft een patiënt met het virus behandeld met een experimenteel medicijn, waarna deze overleed.
+    </p>
+  </div>
+
+  <!-- Kaart 6 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">6.</span> Virus al langer aanwezig
+    </div>
+    <p>
+      Het virus blijkt al langer in het land te zijn, waardoor het aantal besmettingen hoger is dan 
+      eerder werd gedacht.
+    </p>
+  </div>
+
+</div>
+
+<!-- Navigatie -->
+<div class="nav-card">
+  <div class="back-row">
+    <button class="back-button" onclick="window.location.href='scenario2.html'">
+      Terug naar scenario 2
+    </button>
+    <button class="back-button" onclick="window.location.href='index.html'">
+      Terug naar startpagina
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

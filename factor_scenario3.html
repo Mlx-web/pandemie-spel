@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scenario 3 — Factorkaarten</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eceff1;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+    }
+
+    .intro-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 900px;
+      padding: 20px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+      border-left: 6px solid #4a8fd1;
+    }
+
+    .intro-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .intro-text { flex: 1; }
+
+    .intro-title {
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .intro-paragraph {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .intro-image {
+      width: 90px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card {
+      background: #f7f7f7;
+      padding: 18px 18px 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #cccccc;
+    }
+
+    .card-header {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .card-header span.nr {
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    .pos {
+      border-left-color: #6abf69;
+      background: #f1faf1;
+    }
+
+    .neg {
+      border-left-color: #d65b4f;
+      background: #fff5f4;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .nav-card {
+      margin-top: 30px;
+      background: #C0C0C0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    }
+
+    .back-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .back-button {
+      flex: 1;
+      background-color: #555;
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Intro -->
+<div class="intro-card">
+  <div class="intro-content">
+    <div class="intro-text">
+      <h1 class="intro-title">Scenario 3 — Factorkaarten</h1>
+      <p class="intro-paragraph">
+        Als het team het scenario heeft doorgespeeld, kun je het scenario aanpassen met één of meer van onderstaande factorkaarten. 
+        Kies zelf of gebruik een dobbelsteen voor willekeurige selectie.
+      </p>
+    </div>
+    <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
+  </div>
+</div>
+
+<!-- Grid -->
+<div class="grid">
+
+  <!-- Kaart 1 -->
+  <div class="card pos">
+    <div class="card-header">
+      <span class="nr">1.</span> Virusremmers succesvol
+    </div>
+    <p>
+      Een eerste lichtpuntje in donkere dagen: de eerste trials met virusremmers lijken vooral bij kinderen 
+      het beloop gunstig te beïnvloeden en tot minder mortaliteit te leiden.
+    </p>
+  </div>
+
+  <!-- Kaart 2 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">2.</span> Tekorten in de keten
+    </div>
+    <p>
+      Er zijn tekorten aan beschermingsmaterialen, geneesmiddelen, IC-bedden en personeel. De druk op de zorgketen loopt snel op.
+    </p>
+  </div>
+
+  <!-- Kaart 3 -->
+  <div class="card pos">
+    <div class="card-header">
+      <span class="nr">3.</span> Draaiboek ‘code zwart’ 
+    </div>
+    <p>
+      De KNMG stelt samen met de FMS een draaiboek voor code zwart op. Hiermee wordt de verantwoordelijkheid om wegens tekorten 
+      niet te behandelen weggenomen bij de individuele dokter.
+    </p>
+  </div>
+
+  <!-- Kaart 4 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">4.</span> Zorgweigering en angst
+    </div>
+    <p>
+      Medewerkers en personeelsleden met kinderen weigeren patiënten te helpen die verdacht zijn voor of bewezen H19N17 hebben.
+    </p>
+  </div>
+
+  <!-- Kaart 5 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">5.</span> Uitgestelde zorg 
+    </div>
+    <p>
+      Door het afschalen van reguliere zorg komt de behandeling van andere ziekten in het gedrang. 
+      Er ontstaat aanzienlijke uitgestelde zorg-schade.
+    </p>
+  </div>
+
+  <!-- Kaart 6 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">6.</span> Schoolsluitingen 
+    </div>
+    <p>
+      Schoolsluitingen zorgen voor sociale isolatie en een toename van GGZ-problematiek onder kinderen.
+    </p>
+  </div>
+
+</div>
+
+<!-- Navigatie -->
+<div class="nav-card">
+  <div class="back-row">
+    <button class="back-button" onclick="window.location.href='scenario3.html'">
+      Terug naar scenario 3
+    </button>
+    <button class="back-button" onclick="window.location.href='index.html'">
+      Terug naar startpagina
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

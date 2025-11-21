@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Scenario 4 — Factorkaarten</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eceff1;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+    }
+
+    .intro-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 900px;
+      padding: 20px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+      border-left: 6px solid #4a8fd1;
+    }
+
+    .intro-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .intro-text { flex: 1; }
+
+    .intro-title {
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .intro-paragraph {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .intro-image {
+      width: 90px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card {
+      background: #f7f7f7;
+      padding: 18px 18px 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #cccccc;
+    }
+
+    .card-header {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .card-header span.nr {
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    .pos {
+      border-left-color: #6abf69;
+      background: #f1faf1;
+    }
+
+    .neg {
+      border-left-color: #d65b4f;
+      background: #fff5f4;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .nav-card {
+      margin-top: 30px;
+      background: #C0C0C0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    }
+
+    .back-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .back-button {
+      flex: 1;
+      background-color: #555;
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Intro -->
+<div class="intro-card">
+  <div class="intro-content">
+    <div class="intro-text">
+      <h1 class="intro-title">Scenario 4 — Factorkaarten</h1>
+      <p class="intro-paragraph">
+        Gebruik onderstaande factorkaarten om de situatie in scenario 4 verder te verdiepen of te veranderen. 
+        Selecteer handmatig of laat een dobbelsteen bepalen welke kaart wordt ingezet.
+      </p>
+    </div>
+    <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
+  </div>
+</div>
+
+<!-- Grid -->
+<div class="grid">
+
+  <!-- Kaart 1 -->
+  <div class="card pos">
+    <div class="card-header">
+      <span class="nr">1.</span> Voorzichtig optimisme 
+    </div>
+    <p>
+      De maatschappij ziet een lichtpuntje aan het eind van de tunnel. Er heerst opluchting dat er eindelijk 
+      gevaccineerd kan worden en de ergste onrust lijkt tot een einde te komen.
+    </p>
+  </div>
+
+  <!-- Kaart 2 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">2.</span> Post-infectieuze syndroom
+    </div>
+    <p>
+      Veel patiënten houden langdurige moeheid en ernstige vertigoklachten na de infectie, wat leidt tot een nieuwe golf zorgvragen.
+    </p>
+  </div>
+
+  <!-- Kaart 3 -->
+  <div class="card pos">
+    <div class="card-header">
+      <span class="nr">3.</span> Langzame virusmutatie 
+    </div>
+    <p>
+      Het virus muteert zeer langzaam, waardoor de ontwikkelde vaccins langer goed blijven beschermen en minder vaak hoeven te worden aangepast.
+    </p>
+  </div>
+
+  <!-- Kaart 4 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">4.</span> Afschaffing zorgbonus 
+    </div>
+    <p>
+      Zorgpersoneel zou een bonus van €2.500 ontvangen, maar nu de vaccins beschikbaar zijn gaat dit niet meer door. 
+      Dit veroorzaakt demotivatie en frustratie.
+    </p>
+  </div>
+
+  <!-- Kaart 5 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">5.</span> Vaccin met ernstige bijwerkingen?
+    </div>
+    <p>
+      Het vaccin blijkt ernstige bijwerkingen te hebben. Longembolieën zijn gemeld. Het vaccin beschermt wel 
+      goed tegen H19N17. Dit leidt tot onrust en herziening van het beleid.
+    </p>
+  </div>
+
+  <!-- Kaart 6 -->
+  <div class="card neg">
+    <div class="card-header">
+      <span class="nr">6.</span> Vaccin laat op zich wachten
+    </div>
+    <p>
+      Er zijn tegenvallers in de ontwikkeling van een veilig en effectief vaccin. Het lijkt minimaal nog twee jaar te duren 
+      voordat een werkzame variant beschikbaar komt.
+    </p>
+  </div>
+
+</div>
+
+<!-- Navigatie -->
+<div class="nav-card">
+  <div class="back-row">
+    <button class="back-button" onclick="window.location.href='scenario4.html'">
+      Terug naar scenario 4
+    </button>
+    <button class="back-button" onclick="window.location.href='index.html'">
+      Terug naar startpagina
+    </button>
+  </div>
+</div>
+
+</body>
+</html>
