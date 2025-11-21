@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Rollenkaart — Huisarts</title>
+  <title>Rollenkaart — HAP-arts (speelt ook huisartsenpost)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,13 +13,13 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      color: #333333; /* minder hard zwart */
+      color: #333333;
     }
 
     .card {
       background: #f7f7f7;
       border-left: 6px solid #4a8fd1;
-      width: 700px; /* smaller width */
+      width: 700px;
       max-width: 100%;
       padding: 20px 24px;
       border-radius: 12px;
@@ -46,7 +46,6 @@
       line-height: 1.5;
     }
 
-    /* Navigation block now fully outside the roles card */
     .nav-card {
       margin-top: 24px;
       background: #4a8fd1;
@@ -82,31 +81,28 @@
 <body>
 
 <div class="card">
-  <h1>Rollenkaart — Huisarts</h1>
+  <h1>Rollenkaart — HAP-arts<br>(speelt ook huisartsenpost)</h1>
 
   <p class="subhead">1. Praktijkorganisatie &amp; Patiëntenzorg</p>
   <ul>
-    <li>Wat betekent dit scenario voor je praktijkorganisatie?</li>
-    <li>Wat en hoe communiceer je richting patiënten?</li>
-    <li>Hoe richt je triage in en houd je de praktijk bereikbaar?</li>
-    <li>Hoe organiseer je patiëntenstromen (verdacht / niet verdacht)?</li>
-    <li>Welke maatregelen neem je om jezelf en je team te beschermen?</li>
+    <li>Wat betekent dit scenario voor de organisatie van de HAP?</li>
+    <li>Hoe organiseer je instroom en doorstroom van verdachte en niet-verdachte patiënten?</li>
+    <li>Moet je opschalen en hoe pak je dat aan?</li>
   </ul>
 
   <p class="subhead">2. Samenwerking &amp; Communicatie</p>
   <ul>
-    <li>Hoe organiseer je de (crisis-)coördinatie in je praktijk?</li>
-    <li>Hoe stem je af met HAP, ziekenhuis en GGD?</li>
-    <li>Welke afspraken zijn nu het belangrijkst?</li>
+    <li>Hoe organiseer je de (crisis-)coördinatie binnen de HAP?</li>
+    <li>Wat betekent dit voor je samenwerking met huisartsen, SEH/ziekenhuis en GGD?</li>
   </ul>
 </div>
 
-<!-- Navigation block moved fully OUTSIDE the card -->
 <div class="nav-card">
   <div class="back-row">
     <button class="back-button" onclick="history.back()">Terug naar scenario</button>
     <button class="back-button" onclick="window.location.href='index.html'">Terug naar startpagina</button>
   </div>
 </div>
+
 </body>
 </html>
