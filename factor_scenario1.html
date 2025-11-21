@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Scenario 1 — Factorkaarten</title>
-  <style>
+<style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #eceff1; /* rustige lichtgrijze achtergrond */
+      background-color: #dbe7f0;
       margin: 0;
       padding: 40px 20px;
       display: flex;
@@ -15,7 +15,6 @@
       color: #333;
     }
 
-    /* Bovenste witte info-blok */
     .intro-card {
       background: #ffffff;
       width: 100%;
@@ -24,7 +23,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       margin-bottom: 28px;
-      border-left: 6px solid #4a8fd1; /* subtiele blauwe lijn */
+      border-left: 6px solid #4a8fd1;
     }
 
     .intro-content {
@@ -51,13 +50,12 @@
     }
 
     .intro-image {
-  width: 90px;
-  height: auto;
-  flex-shrink: 0;
-  border-radius: 12px; /* afgeronde hoeken */
-}
+      width: 90px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 12px;
+    }
 
-    /* Grid met factorkaarten */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -71,7 +69,7 @@
       padding: 18px 18px 16px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-left: 6px solid #cccccc;  /* neutraal */
+      border-left: 6px solid #cccccc;
     }
 
     .card-header {
@@ -85,12 +83,12 @@
     }
 
     .pos {
-      border-left-color: #6abf69; /* zacht groen */
+      border-left-color: #6abf69;
       background: #f1faf1;
     }
 
     .neg {
-      border-left-color: #d65b4f; /* zacht rood */
+      border-left-color: #d65b4f;
       background: #fff5f4;
     }
 
@@ -100,38 +98,40 @@
       font-size: 14px;
     }
 
-    /* Navigatieblok */
-    .nav-card {
+  .nav-card {
       margin-top: 30px;
- background: #C0C0C0; 
       padding: 14px 20px;
       border-radius: 12px;
       width: 100%;
       max-width: 700px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-    }
+      box-shadow: none; /* mag blijven of weg */
+}
+
 
     .back-row {
       display: flex;
-      justify-content: space-between;
+   justify-content: center;
       gap: 12px;
     }
 
-    .back-button {
-      flex: 1;
-      background-color: #555;
-      border: none;
-      padding: 10px 16px;
-      font-size: 16px;
-      color: white;
-      border-radius: 10px;
-      cursor: pointer;
+    /* ✔️ jouw button-stijl (nu werkt hij weer!) */
+    button {
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4a8fd1;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        width: 200px;
+        margin-top: 20px;
     }
 
-    .back-button:hover {
-      background-color: #444;
+    button:hover {
+        background-color: #3c7db5;
     }
-  </style>
+</style>
+
 </head>
 <body>
 

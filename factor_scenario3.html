@@ -3,130 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <title>Scenario 3 — Factorkaarten</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #eceff1;
-      margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #333;
-    }
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #dbe7f0;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+  }
 
-    .intro-card {
-      background: #ffffff;
-      width: 100%;
-      max-width: 900px;
-      padding: 20px 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin-bottom: 28px;
-      border-left: 6px solid #4a8fd1;
-    }
+  .intro-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 28px;
+    border-left: 6px solid #4a8fd1;
+  }
 
-    .intro-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
+  .intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
 
-    .intro-text { flex: 1; }
+  .intro-text {
+    flex: 1;
+  }
 
-    .intro-title {
-      font-size: 24px;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
+  .intro-title {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 
-    .intro-paragraph {
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 0;
-    }
+  .intro-paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
 
-    .intro-image {
-      width: 90px;
-      height: auto;
-      flex-shrink: 0;
-      border-radius: 12px;
-    }
+  .intro-image {
+    width: 90px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 12px;
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      width: 100%;
-      max-width: 1100px;
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+  }
 
-    .card {
-      background: #f7f7f7;
-      padding: 18px 18px 16px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-left: 6px solid #cccccc;
-    }
+  .card {
+    background: #f7f7f7;
+    padding: 18px 18px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-left: 6px solid #cccccc;
+  }
 
-    .card-header {
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
+  .card-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
 
-    .card-header span.nr {
-      font-weight: bold;
-      margin-right: 6px;
-    }
+  .card-header span.nr {
+    margin-right: 6px;
+    font-weight: bold;
+  }
 
-    .pos {
-      border-left-color: #6abf69;
-      background: #f1faf1;
-    }
+  .pos {
+    border-left-color: #6abf69;
+    background: #f1faf1;
+  }
 
-    .neg {
-      border-left-color: #d65b4f;
-      background: #fff5f4;
-    }
+  .neg {
+    border-left-color: #d65b4f;
+    background: #fff5f4;
+  }
 
-    .card p {
-      margin: 0;
-      line-height: 1.5;
-      font-size: 14px;
-    }
+  .card p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+  }
 
-    .nav-card {
-      margin-top: 30px;
-      background: #C0C0C0;
-      padding: 14px 20px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 700px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-    }
+  /* Navigatie */
+  .nav-card {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 700px;
+  }
 
-    .back-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-    }
+  .back-row {
+    display: flex;
+    justify-content: center;
+  }
 
-    .back-button {
-      flex: 1;
-      background-color: #555;
-      border: none;
-      padding: 10px 16px;
-      font-size: 16px;
-      color: white;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+  /* Blauwe knop */
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4a8fd1;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    width: 200px;
+    margin-top: 20px;
+  }
 
-    .back-button:hover {
-      background-color: #444;
-    }
-  </style>
+  button:hover {
+    background-color: #3c7db5;
+  }
+</style>
+
 </head>
 <body>
 
