@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,23 +16,25 @@
       color: #333;
     }
 
-    .intro-card {
-      background: #ffffff;
-      width: 100%;
-      max-width: 900px;
-      padding: 20px 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin-bottom: 28px;
-      border-left: 6px solid #4a8fd1;
-    }
+.intro-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 650px;  /* smaller blok */
+  padding: 28px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 28px;
+  border-left: 6px solid #4a8fd1;
+}
 
-    .intro-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
+/* Zorgt dat tekst en afbeelding netjes blijven als de kaart smaller is */
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
     .intro-text {
       flex: 1;
@@ -142,7 +145,7 @@
       <h1 class="intro-title">Scenario 1 — Factorkaarten</h1>
       <p class="intro-paragraph">
         Als het team het scenario heeft doorgespeeld, kun je het scenario veranderen met één of 
-        meer van onderstaande factorkaarten. Kies zelf welke kaart je inzet, of gooi de dobbelsteen voor een willekeurige kaart.
+        meer van onderstaande factorkaarten. <br> Kies zelf welke kaart je inzet, of gooi de dobbelsteen voor een willekeurige kaart.
       </p>
     </div>
     <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">

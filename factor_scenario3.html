@@ -15,23 +15,26 @@
     color: #333;
   }
 
-  .intro-card {
-    background: #ffffff;
-    width: 100%;
-    max-width: 900px;
-    padding: 20px 24px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 28px;
-    border-left: 6px solid #4a8fd1;
-  }
+ .intro-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 650px;  /* smaller blok */
+  padding: 28px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 28px;
+  border-left: 6px solid #4a8fd1;
+}
 
-  .intro-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-  }
+/* Zorgt dat tekst en afbeelding netjes blijven als de kaart smaller is */
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 
   .intro-text {
     flex: 1;
