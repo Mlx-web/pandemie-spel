@@ -46,36 +46,36 @@
       line-height: 1.5;
     }
 
-    .nav-card {
-      margin-top: 24px;
-      background: #4a8fd1;
-      padding: 14px 18px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-      width: 700px;
-      max-width: 100%;
-    }
 
-    .back-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
+  /* Navigatie */
+  .nav-card {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 700px;
+  }
 
-    .back-button {
-      flex: 1;
-      background-color: #555555;
-      padding: 10px 16px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      color: white;
-      border-radius: 10px;
-    }
+  .back-row {
+    display: flex;
+    justify-content: center;
+  }
 
-    .back-button:hover {
-      background-color: #444444;
-    }
+  /* Blauwe knop */
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4a8fd1;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #3c7db5;
+  }
+
   </style>
 </head>
 <body>
@@ -102,7 +102,6 @@
 <div class="nav-card">
   <div class="back-row">
     <button class="back-button" onclick="history.back()">Terug naar scenario</button>
-    <button class="back-button" onclick="window.location.href='index.html'">Terug naar startpagina</button>
   </div>
 </div>
 
