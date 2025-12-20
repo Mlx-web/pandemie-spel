@@ -1,107 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Rollenkaart — HAP-arts (speelt ook huisartsenpost)</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    background-color: #dbe7f0; /* zachte lichtblauwe achtergrond */
-      margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      color: #333333;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 
-    .card {
-      background: #f7f7f7;
-      border-left: 6px solid #4a8fd1;
-      width: 700px;
-      max-width: 100%;
-      padding: 20px 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    h1 {
-      font-size: 22px;
-      margin-top: 0;
-      margin-bottom: 18px;
-    }
-
-    .subhead {
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 14px;
-      margin-bottom: 6px;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin-top: 4px;
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
-
-  /* Navigatie */
-  .nav-card {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 700px;
-  }
-
-  .back-row {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* Blauwe knop */
-  button {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4a8fd1;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    width: 200px;
-    margin-top: 20px;
-  }
-
-  button:hover {
-    background-color: #3c7db5;
-  }
-
-  </style>
-
+  <title>Rollenkaart — HAP-arts</title>
 </head>
+
 <body>
 
-<div class="card">
-  <h1>Rollenkaart — HAP-arts (speelt ook huisartsenpost)</h1>
+  <div class="card">
+    <h1>Rollenkaart — HAP-arts (speelt ook huisartsenpost)</h1>
 
-  <p class="subhead">1. Praktijkorganisatie &amp; Patiëntenzorg</p>
-  <ul>
-    <li>Wat betekent dit scenario voor de organisatie van de HAP?</li>
-    <li>Hoe organiseer je instroom en doorstroom van verdachte en niet-verdachte patiënten?</li>
-    <li>Moet je opschalen en hoe pak je dat aan?</li>
-  </ul>
+    <p class="subhead">1. Praktijkorganisatie &amp; Patiëntenzorg</p>
+    <ul>
+      <li>Wat betekent dit scenario voor de organisatie van de HAP?</li>
+      <li>Hoe organiseer je instroom en doorstroom van verdachte en niet-verdachte patiënten?</li>
+      <li>Moet je opschalen en hoe pak je dat aan?</li>
+    </ul>
 
-  <p class="subhead">2. Samenwerking &amp; Communicatie</p>
-  <ul>
-    <li>Hoe organiseer je de (crisis-)coördinatie binnen de HAP?</li>
-    <li>Wat betekent dit voor je samenwerking met huisartsen, SEH/ziekenhuis en GGD?</li>
-  </ul>
-</div>
-
-<div class="nav-card">
-  <div class="back-row">
-    <button class="back-button" onclick="history.back()">Terug naar scenario</button>
+    <p class="subhead">2. Samenwerking &amp; Communicatie</p>
+    <ul>
+      <li>Hoe organiseer je de (crisis-)coördinatie binnen de HAP?</li>
+      <li>Wat betekent dit voor je samenwerking met huisartsen, SEH/ziekenhuis en GGD?</li>
+    </ul>
   </div>
-</div>
+
+  <div class="nav-card">
+    <button onclick="history.back()">Terug naar scenario</button>
+  </div>
 
 </body>
 </html>
