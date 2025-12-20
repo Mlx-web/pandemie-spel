@@ -1,230 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scenario 4 — Factorkaarten</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #dbe7f0;
-    margin: 0;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #333;
-  }
 
- .intro-card {
-  background: #ffffff;
-  width: 100%;
-  max-width: 650px;  /* smaller blok */
-  padding: 28px 28px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  margin-bottom: 28px;
-  border-left: 6px solid #4a8fd1;
-}
+  <style>
+    * { box-sizing: border-box; }
 
-/* Zorgt dat tekst en afbeelding netjes blijven als de kaart smaller is */
-.intro-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #dbe7f0;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+    }
 
-  .intro-text {
-    flex: 1;
-  }
+    .intro-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 650px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+      border-left: 6px solid #4a8fd1;
+    }
 
-  .intro-title {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
+    .intro-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-  .intro-paragraph {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-  }
+    .intro-text { flex: 1; }
 
-  .intro-image {
-    width: 90px;
-    height: auto;
-    flex-shrink: 0;
-    border-radius: 12px;
-  }
+    .intro-title {
+      font-size: 24px;
+      margin: 0 0 10px 0;
+      text-align: left;
+    }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1100px;
-  }
+    .intro-paragraph {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      text-align: left;
+    }
 
-  .card {
-    background: #f7f7f7;
-    padding: 18px 18px 16px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-left: 6px solid #cccccc;
-  }
+    .intro-image {
+      width: 90px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 12px;
+    }
 
-  .card-header {
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
 
-  .card-header span.nr {
-    margin-right: 6px;
-    font-weight: bold;
-  }
+    .card {
+      background: #f7f7f7;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #cccccc;
+    }
 
-  .pos {
-    border-left-color: #6abf69;
-    background: #f1faf1;
-  }
+    .card-header {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
 
-  .neg {
-    border-left-color: #d65b4f;
-    background: #fff5f4;
-  }
+    .card-header .nr {
+      margin-right: 6px;
+      font-weight: bold;
+    }
 
-  .card p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 14px;
-  }
+    .pos {
+      border-left-color: #6abf69;
+      background: #f1faf1;
+    }
 
-  /* Navigatie */
-  .nav-card {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 700px;
-  }
+    .neg {
+      border-left-color: #d65b4f;
+      background: #fff5f4;
+    }
 
-  .back-row {
-    display: flex;
-    justify-content: center;
-  }
+    .card p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 14px;
+      text-align: left;
+    }
 
-  /* Blauwe knop */
-  button {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4a8fd1;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    width: 200px;
-    margin-top: 20px;
-  }
+    /* Navigatie */
+    .nav-card {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 700px;
+    }
 
-  button:hover {
-    background-color: #3c7db5;
-  }
-</style>
+    .back-row {
+      display: flex;
+      justify-content: center;
+    }
 
+    .back-button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4a8fd1;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      width: 200px;
+      margin-top: 20px;
+    }
+
+    .back-button:hover {
+      background-color: #3c7db5;
+    }
+
+    /* =========================
+       MOBIEL
+       ========================= */
+    @media (max-width: 700px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .intro-card {
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+
+      .intro-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro-title {
+        font-size: 20px;
+      }
+
+      .intro-image {
+        width: 70px;
+        margin-top: 10px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .card p {
+        font-size: 15px;
+      }
+
+      .back-button {
+        width: 100%;
+        max-width: 420px;
+        min-height: 48px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Intro -->
-<div class="intro-card">
-  <div class="intro-content">
-    <div class="intro-text">
-      <h1 class="intro-title">Scenario 4 — Factorkaarten</h1>
-      <p class="intro-paragraph">
-        Gebruik onderstaande factorkaarten om de situatie in scenario 4 verder te verdiepen of te veranderen. 
-        Selecteer handmatig of laat een dobbelsteen bepalen welke kaart wordt ingezet.
+  <!-- Intro -->
+  <div class="intro-card">
+    <div class="intro-content">
+      <div class="intro-text">
+        <h1 class="intro-title">Scenario 4 — Factorkaarten</h1>
+        <p class="intro-paragraph">
+          Gebruik onderstaande factorkaarten om de situatie in scenario 4 verder te verdiepen
+          of te veranderen. Selecteer handmatig of laat een dobbelsteen bepalen welke kaart
+          wordt ingezet.
+        </p>
+      </div>
+      <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid">
+
+    <div class="card pos">
+      <div class="card-header"><span class="nr">1.</span> Voorzichtig optimisme</div>
+      <p>
+        De maatschappij ziet een lichtpuntje aan het eind van de tunnel. Er heerst opluchting
+        dat er eindelijk gevaccineerd kan worden.
       </p>
     </div>
-    <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
-  </div>
-</div>
 
-<!-- Grid -->
-<div class="grid">
-
-  <!-- Kaart 1 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">1.</span> Voorzichtig optimisme 
+    <div class="card neg">
+      <div class="card-header"><span class="nr">2.</span> Post-infectieuze syndroom</div>
+      <p>
+        Veel patiënten houden langdurige klachten, wat leidt tot een nieuwe golf zorgvragen.
+      </p>
     </div>
-    <p>
-      De maatschappij ziet een lichtpuntje aan het eind van de tunnel. Er heerst opluchting dat er eindelijk 
-      gevaccineerd kan worden en de ergste onrust lijkt tot een einde te komen.
-    </p>
-  </div>
 
-  <!-- Kaart 2 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">2.</span> Post-infectieuze syndroom
+    <div class="card pos">
+      <div class="card-header"><span class="nr">3.</span> Langzame virusmutatie</div>
+      <p>
+        Het virus muteert langzaam, waardoor vaccins langer effectief blijven.
+      </p>
     </div>
-    <p>
-      Veel patiënten houden langdurige moeheid en ernstige vertigoklachten na de infectie, wat leidt tot een nieuwe golf zorgvragen.
-    </p>
-  </div>
 
-  <!-- Kaart 3 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">3.</span> Langzame virusmutatie 
+    <div class="card neg">
+      <div class="card-header"><span class="nr">4.</span> Afschaffing zorgbonus</div>
+      <p>
+        Het schrappen van de zorgbonus veroorzaakt demotivatie en frustratie onder personeel.
+      </p>
     </div>
-    <p>
-      Het virus muteert zeer langzaam, waardoor de ontwikkelde vaccins langer goed blijven beschermen en minder vaak hoeven te worden aangepast.
-    </p>
-  </div>
 
-  <!-- Kaart 4 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">4.</span> Afschaffing zorgbonus 
+    <div class="card neg">
+      <div class="card-header"><span class="nr">5.</span> Vaccin met ernstige bijwerkingen?</div>
+      <p>
+        Ernstige bijwerkingen leiden tot onrust en herziening van het vaccinatiebeleid.
+      </p>
     </div>
-    <p>
-      Zorgpersoneel zou een bonus van €2.500 ontvangen, maar nu de vaccins beschikbaar zijn gaat dit niet meer door. 
-      Dit veroorzaakt demotivatie en frustratie.
-    </p>
-  </div>
 
-  <!-- Kaart 5 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">5.</span> Vaccin met ernstige bijwerkingen?
+    <div class="card neg">
+      <div class="card-header"><span class="nr">6.</span> Vaccin laat op zich wachten</div>
+      <p>
+        Tegenvallers zorgen ervoor dat een effectief vaccin nog jaren op zich laat wachten.
+      </p>
     </div>
-    <p>
-      Het vaccin blijkt ernstige bijwerkingen te hebben. Longembolieën zijn gemeld. Het vaccin beschermt wel 
-      goed tegen H19N17. Dit leidt tot onrust en herziening van het beleid.
-    </p>
+
   </div>
 
-  <!-- Kaart 6 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">6.</span> Vaccin laat op zich wachten
+  <!-- Navigatie -->
+  <div class="nav-card">
+    <div class="back-row">
+      <button class="back-button" onclick="window.location.href='scenario4.html'">
+        Terug naar scenario 4
+      </button>
     </div>
-    <p>
-      Er zijn tegenvallers in de ontwikkeling van een veilig en effectief vaccin. Het lijkt minimaal nog twee jaar te duren 
-      voordat een werkzame variant beschikbaar komt.
-    </p>
   </div>
-
-</div>
-
-<!-- Navigatie -->
-<div class="nav-card">
-  <div class="back-row">
-    <button class="back-button" onclick="window.location.href='scenario4.html'">
-      Terug naar scenario 4
-    </button>
- 
-  </div>
-</div>
 
 </body>
 </html>

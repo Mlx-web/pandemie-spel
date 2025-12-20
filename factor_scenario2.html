@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scenario 2 — Factorkaarten</title>
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #dbe7f0;
@@ -16,41 +19,38 @@
       color: #333;
     }
 
-   .intro-card {
-  background: #ffffff;
-  width: 100%;
-  max-width: 650px;  /* smaller blok */
-  padding: 28px 28px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  margin-bottom: 28px;
-  border-left: 6px solid #4a8fd1;
-}
-
-/* Zorgt dat tekst en afbeelding netjes blijven als de kaart smaller is */
-.intro-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-
-    .intro-text {
-      flex: 1;
+    .intro-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 650px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+      border-left: 6px solid #4a8fd1;
     }
+
+    .intro-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .intro-text { flex: 1; }
 
     .intro-title {
       font-size: 24px;
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 10px 0;
+      text-align: left;
     }
 
     .intro-paragraph {
       font-size: 16px;
       line-height: 1.5;
       margin: 0;
+      text-align: left;
     }
 
     .intro-image {
@@ -70,7 +70,7 @@
 
     .card {
       background: #f7f7f7;
-      padding: 18px 18px 16px;
+      padding: 18px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       border-left: 6px solid #cccccc;
@@ -81,7 +81,7 @@
       margin-bottom: 8px;
     }
 
-    .card-header span.nr {
+    .card-header .nr {
       margin-right: 6px;
       font-weight: bold;
     }
@@ -100,9 +100,9 @@
       margin: 0;
       line-height: 1.5;
       font-size: 14px;
+      text-align: left;
     }
 
-    /* Navigatie */
     .nav-card {
       margin-top: 30px;
       width: 100%;
@@ -114,7 +114,7 @@
       justify-content: center;
     }
 
-    button {
+    .back-button {
       padding: 10px 15px;
       font-size: 16px;
       cursor: pointer;
@@ -126,106 +126,129 @@
       margin-top: 20px;
     }
 
-    button:hover {
+    .back-button:hover {
       background-color: #3c7db5;
     }
 
+    /* =========================
+       MOBIEL
+       ========================= */
+    @media (max-width: 700px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .intro-card {
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+
+      .intro-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro-title {
+        font-size: 20px;
+      }
+
+      .intro-image {
+        width: 70px;
+        margin-top: 10px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr; /* 1 kolom op mobiel */
+        gap: 14px;
+      }
+
+      .card p {
+        font-size: 15px;
+      }
+
+      .back-button {
+        width: 100%;
+        max-width: 420px;
+        min-height: 48px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<!-- Intro-blok -->
-<div class="intro-card">
-  <div class="intro-content">
-    <div class="intro-text">
-      <h1 class="intro-title">Scenario 2 — Factorkaarten</h1>
-      <p class="intro-paragraph">
-        Als het team het scenario heeft doorgespeeld, kun je het scenario veranderen met één of 
-        meer van onderstaande factorkaarten. Kies zelf welke kaart je inzet, of gooi de dobbelsteen voor een willekeurige kaart.
+  <!-- Intro -->
+  <div class="intro-card">
+    <div class="intro-content">
+      <div class="intro-text">
+        <h1 class="intro-title">Scenario 2 — Factorkaarten</h1>
+        <p class="intro-paragraph">
+          Als het team het scenario heeft doorgespeeld, kun je het scenario veranderen met één of
+          meer van onderstaande factorkaarten. Kies zelf welke kaart je inzet, of gooi de
+          dobbelsteen voor een willekeurige kaart.
+        </p>
+      </div>
+      <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
+    </div>
+  </div>
+
+  <!-- Kaarten -->
+  <div class="grid">
+
+    <div class="card pos">
+      <div class="card-header"><span class="nr">1.</span> Landelijke steun en applaus</div>
+      <p>
+        Elke dinsdagavond om 19u applaudisseert Nederland voor haar zorgverleners.
+        Er zijn programma’s op de TV over zorgverleners in deze pandemie.
       </p>
     </div>
-    <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
-  </div>
-</div>
 
-<!-- Grid met 6 kaarten -->
-<div class="grid">
-
-  <!-- Kaart 1 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">1.</span> Landelijke steun en applaus
+    <div class="card pos">
+      <div class="card-header"><span class="nr">2.</span> Richtlijnen en handreikingen</div>
+      <p>
+        De LHV verspreidt handreikingen voor het aanpassen van de praktijkorganisatie.
+        Het NHG brengt via versnelde richtlijnontwikkeling een voorlopige standaard uit.
+      </p>
     </div>
-    <p>
-      Elke dinsdagavond om 19u applaudisseert Nederland voor haar zorgverleners. Er zijn programma’s 
-      op de TV over zorgverleners in deze pandemie met titels als “Helden in de frontlinie”.
-    </p>
-  </div>
 
-  <!-- Kaart 2 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">2.</span> Richtlijnen en handreikingen
+    <div class="card pos">
+      <div class="card-header"><span class="nr">3.</span> Focus op hygiëne</div>
+      <p>
+        Hygiënemaatregelen spelen een belangrijke rol in het beperken van de verspreiding.
+      </p>
     </div>
-    <p>
-      De LHV verspreidt handreikingen voor het aanpassen van de praktijkorganisatie. Het NHG brengt 
-      via versnelde richtlijnontwikkeling een voorlopige N19H17-standaard uit.
-    </p>
-  </div>
 
-  <!-- Kaart 3 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">3.</span> Focus op hygiëne
+    <div class="card pos">
+      <div class="card-header"><span class="nr">4.</span> Gemeenschap en onderlinge hulp</div>
+      <p>
+        Gemeenschappen mobiliseren elkaar om voedsel, medicatie en ondersteuning te bieden.
+      </p>
     </div>
-    <p>
-      De overdracht van het virus gaat met name door contact via oppervlakten. Hygiënemaatregelen 
-      hebben daarmee een belangrijke rol om de verspreiding in te dammen.
-    </p>
-  </div>
 
-  <!-- Kaart 4 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">4.</span> Gemeenschap en onderlinge hulp
+    <div class="card neg">
+      <div class="card-header"><span class="nr">5.</span> Schadelijke behandelingen</div>
+      <p>
+        Onjuiste medische informatie leidt tot gevaarlijke behandelingen en overlijden.
+      </p>
     </div>
-    <p>
-      Gemeenschappen mobiliseren elkaar te helpen, zoals het rondbrengen van voedselpakketten en het 
-      ophalen van medicatie voor elkaar.
-    </p>
-  </div>
 
-  <!-- Kaart 5 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">5.</span> Schadelijke behandelingen
+    <div class="card neg">
+      <div class="card-header"><span class="nr">6.</span> Virus al langer aanwezig</div>
+      <p>
+        Het virus blijkt al langer in Nederland aanwezig dan aanvankelijk gedacht.
+      </p>
     </div>
-    <p>
-      Onjuiste informatie over medische behandeling leidt internationaal en ook in Nederland tot problemen. Een huisarts in de regionale zorggroep heeft een patiënt met het virus behandeld met een experimenteel medicijn, waarna deze overleed.
-    </p>
+
   </div>
 
-  <!-- Kaart 6 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">6.</span> Virus al langer aanwezig
+  <!-- Navigatie -->
+  <div class="nav-card">
+    <div class="back-row">
+      <button class="back-button" onclick="window.location.href='scenario2.html'">
+        Terug naar scenario 2
+      </button>
     </div>
-    <p>
-      Het virus blijkt al langer in het land te zijn, waardoor het aantal besmettingen hoger is dan 
-      eerder werd gedacht.
-    </p>
   </div>
-
-</div>
-
-<!-- Navigatie -->
-<div class="nav-card">
-  <div class="back-row">
-    <button onclick="window.location.href='scenario2.html'">
-      Terug naar scenario 2
-    </button>
-  </div>
-</div>
 
 </body>
 </html>

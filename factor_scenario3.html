@@ -1,230 +1,260 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scenario 3 — Factorkaarten</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #dbe7f0;
-    margin: 0;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #333;
-  }
 
- .intro-card {
-  background: #ffffff;
-  width: 100%;
-  max-width: 650px;  /* smaller blok */
-  padding: 28px 28px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  margin-bottom: 28px;
-  border-left: 6px solid #4a8fd1;
-}
+  <style>
+    * { box-sizing: border-box; }
 
-/* Zorgt dat tekst en afbeelding netjes blijven als de kaart smaller is */
-.intro-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #dbe7f0;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+    }
 
+    .intro-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 650px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+      border-left: 6px solid #4a8fd1;
+    }
 
-  .intro-text {
-    flex: 1;
-  }
+    .intro-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-  .intro-title {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
+    .intro-text { flex: 1; }
 
-  .intro-paragraph {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-  }
+    .intro-title {
+      font-size: 24px;
+      margin: 0 0 10px 0;
+      text-align: left;
+    }
 
-  .intro-image {
-    width: 90px;
-    height: auto;
-    flex-shrink: 0;
-    border-radius: 12px;
-  }
+    .intro-paragraph {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      text-align: left;
+    }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1100px;
-  }
+    .intro-image {
+      width: 90px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 12px;
+    }
 
-  .card {
-    background: #f7f7f7;
-    padding: 18px 18px 16px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-left: 6px solid #cccccc;
-  }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
 
-  .card-header {
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
+    .card {
+      background: #f7f7f7;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #cccccc;
+    }
 
-  .card-header span.nr {
-    margin-right: 6px;
-    font-weight: bold;
-  }
+    .card-header {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
 
-  .pos {
-    border-left-color: #6abf69;
-    background: #f1faf1;
-  }
+    .card-header .nr {
+      margin-right: 6px;
+      font-weight: bold;
+    }
 
-  .neg {
-    border-left-color: #d65b4f;
-    background: #fff5f4;
-  }
+    .pos {
+      border-left-color: #6abf69;
+      background: #f1faf1;
+    }
 
-  .card p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 14px;
-  }
+    .neg {
+      border-left-color: #d65b4f;
+      background: #fff5f4;
+    }
 
-  /* Navigatie */
-  .nav-card {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 700px;
-  }
+    .card p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 14px;
+      text-align: left;
+    }
 
-  .back-row {
-    display: flex;
-    justify-content: center;
-  }
+    /* Navigatie */
+    .nav-card {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 700px;
+    }
 
-  /* Blauwe knop */
-  button {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4a8fd1;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    width: 200px;
-    margin-top: 20px;
-  }
+    .back-row {
+      display: flex;
+      justify-content: center;
+    }
 
-  button:hover {
-    background-color: #3c7db5;
-  }
-</style>
+    .back-button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4a8fd1;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      width: 200px;
+      margin-top: 20px;
+      text-align: center;
+    }
 
+    .back-button:hover {
+      background-color: #3c7db5;
+    }
+
+    /* =========================
+       MOBIEL
+       ========================= */
+    @media (max-width: 700px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .intro-card {
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+
+      .intro-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro-title {
+        font-size: 20px;
+      }
+
+      .intro-image {
+        width: 70px;
+        margin-top: 10px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr; /* 1 kolom op mobiel */
+        gap: 14px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .card p {
+        font-size: 15px;
+      }
+
+      .back-button {
+        width: 100%;
+        max-width: 420px;
+        min-height: 48px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Intro -->
-<div class="intro-card">
-  <div class="intro-content">
-    <div class="intro-text">
-      <h1 class="intro-title">Scenario 3 — Factorkaarten</h1>
-      <p class="intro-paragraph">
-        Als het team het scenario heeft doorgespeeld, kun je het scenario aanpassen met één of meer van onderstaande factorkaarten. 
-        Kies zelf of gebruik een dobbelsteen voor willekeurige selectie.
+  <!-- Intro -->
+  <div class="intro-card">
+    <div class="intro-content">
+      <div class="intro-text">
+        <h1 class="intro-title">Scenario 3 — Factorkaarten</h1>
+        <p class="intro-paragraph">
+          Als het team het scenario heeft doorgespeeld, kun je het scenario aanpassen met één of meer van onderstaande factorkaarten.
+          Kies zelf of gebruik een dobbelsteen voor willekeurige selectie.
+        </p>
+      </div>
+      <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid">
+
+    <div class="card pos">
+      <div class="card-header"><span class="nr">1.</span> Virusremmers succesvol</div>
+      <p>
+        Een eerste lichtpuntje in donkere dagen: de eerste trials met virusremmers lijken vooral bij kinderen
+        het beloop gunstig te beïnvloeden en tot minder mortaliteit te leiden.
       </p>
     </div>
-    <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
-  </div>
-</div>
 
-<!-- Grid -->
-<div class="grid">
-
-  <!-- Kaart 1 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">1.</span> Virusremmers succesvol
+    <div class="card neg">
+      <div class="card-header"><span class="nr">2.</span> Tekorten in de keten</div>
+      <p>
+        Er zijn tekorten aan beschermingsmaterialen, geneesmiddelen, IC-bedden en personeel. De druk op de zorgketen loopt snel op.
+      </p>
     </div>
-    <p>
-      Een eerste lichtpuntje in donkere dagen: de eerste trials met virusremmers lijken vooral bij kinderen 
-      het beloop gunstig te beïnvloeden en tot minder mortaliteit te leiden.
-    </p>
-  </div>
 
-  <!-- Kaart 2 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">2.</span> Tekorten in de keten
+    <div class="card pos">
+      <div class="card-header"><span class="nr">3.</span> Draaiboek ‘code zwart’</div>
+      <p>
+        De KNMG stelt samen met de FMS een draaiboek voor code zwart op. Hiermee wordt de verantwoordelijkheid om wegens tekorten
+        niet te behandelen weggenomen bij de individuele dokter.
+      </p>
     </div>
-    <p>
-      Er zijn tekorten aan beschermingsmaterialen, geneesmiddelen, IC-bedden en personeel. De druk op de zorgketen loopt snel op.
-    </p>
-  </div>
 
-  <!-- Kaart 3 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">3.</span> Draaiboek ‘code zwart’ 
+    <div class="card neg">
+      <div class="card-header"><span class="nr">4.</span> Zorgweigering en angst</div>
+      <p>
+        Medewerkers en personeelsleden met kinderen weigeren patiënten te helpen die verdacht zijn voor of bewezen H19N17 hebben.
+      </p>
     </div>
-    <p>
-      De KNMG stelt samen met de FMS een draaiboek voor code zwart op. Hiermee wordt de verantwoordelijkheid om wegens tekorten 
-      niet te behandelen weggenomen bij de individuele dokter.
-    </p>
-  </div>
 
-  <!-- Kaart 4 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">4.</span> Zorgweigering en angst
+    <div class="card neg">
+      <div class="card-header"><span class="nr">5.</span> Uitgestelde zorg</div>
+      <p>
+        Door het afschalen van reguliere zorg komt de behandeling van andere ziekten in het gedrang.
+        Er ontstaat aanzienlijke uitgestelde zorg-schade.
+      </p>
     </div>
-    <p>
-      Medewerkers en personeelsleden met kinderen weigeren patiënten te helpen die verdacht zijn voor of bewezen H19N17 hebben.
-    </p>
-  </div>
 
-  <!-- Kaart 5 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">5.</span> Uitgestelde zorg 
+    <div class="card neg">
+      <div class="card-header"><span class="nr">6.</span> Schoolsluitingen</div>
+      <p>
+        Schoolsluitingen zorgen voor sociale isolatie en een toename van GGZ-problematiek onder kinderen.
+      </p>
     </div>
-    <p>
-      Door het afschalen van reguliere zorg komt de behandeling van andere ziekten in het gedrang. 
-      Er ontstaat aanzienlijke uitgestelde zorg-schade.
-    </p>
+
   </div>
 
-  <!-- Kaart 6 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">6.</span> Schoolsluitingen 
+  <!-- Navigatie -->
+  <div class="nav-card">
+    <div class="back-row">
+      <button class="back-button" onclick="window.location.href='scenario3.html'">
+        Terug naar scenario 3
+      </button>
     </div>
-    <p>
-      Schoolsluitingen zorgen voor sociale isolatie en een toename van GGZ-problematiek onder kinderen.
-    </p>
   </div>
-
-</div>
-
-<!-- Navigatie -->
-<div class="nav-card">
-  <div class="back-row">
-    <button class="back-button" onclick="window.location.href='scenario3.html'">
-      Terug naar scenario 3
-    </button>
-  
-  </div>
-</div>
 
 </body>
 </html>
