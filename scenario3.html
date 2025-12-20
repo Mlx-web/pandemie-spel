@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scenario 3 — Crisis</title>
+
   <style>
+    * { box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f0ac7c; /* warme oranje achtergrond */
@@ -13,6 +17,7 @@
       flex-direction: column;
       align-items: center;
       gap: 24px;
+      color: #333;
     }
 
     .main-row {
@@ -26,7 +31,7 @@
 
     .scenario-card {
       background: #f7f7f7;
-      border-left: 6px solid #d65b4f; /* zachte warme roodtint */
+      border-left: 6px solid #d65b4f; /* warme roodtint */
       width: 850px;
       max-width: 100%;
       padding: 24px 22px 22px;
@@ -46,24 +51,26 @@
 
     h1 {
       font-size: 22px;
-      margin-top: 0;
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
+      text-align: left;
     }
 
     p {
       text-align: left;
       line-height: 1.5;
-      margin-bottom: 15px;
+      margin: 0 0 15px 0;
     }
 
     ul {
+      text-align: left;
       padding-left: 20px;
-      margin-top: 0;
-      margin-bottom: 15px;
+      margin: 0 0 15px 0;
+      line-height: 1.4;
     }
 
     .role-btn,
     .spelleider-btn {
+      display: block;
       padding: 10px 15px;
       font-size: 16px;
       cursor: pointer;
@@ -75,21 +82,11 @@
       text-align: center;
     }
 
-    .role-btn {
-      background-color: #d65b4f;
-    }
+    .role-btn { background-color: #d65b4f; }
+    .role-btn:hover { background-color: #b0483f; }
 
-    .role-btn:hover {
-      background-color: #b0483f;
-    }
-
-    .spelleider-btn {
-      background-color: #555555;
-    }
-
-    .spelleider-btn:hover {
-      background-color: #444444;
-    }
+    .spelleider-btn { background-color: #555555; }
+    .spelleider-btn:hover { background-color: #444444; }
 
     .nav-card {
       background: #d65b4f;
@@ -118,62 +115,91 @@
       text-align: center;
     }
 
-    .back-button:hover {
-      background-color: #444;
+    .back-button:hover { background-color: #444; }
+
+    /* =========================
+       MOBIEL
+       ========================= */
+    @media (max-width: 900px) {
+      body {
+        padding: 18px 12px;
+        gap: 16px;
+      }
+
+      .main-row {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .scenario-card,
+      .roles-card,
+      .nav-card {
+        width: 100%;
+      }
+
+      .role-btn,
+      .spelleider-btn,
+      .back-button {
+        min-height: 48px;
+        font-size: 16px;
+      }
+
+      .back-row {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<div class="main-row">
+  <div class="main-row">
 
-  <div class="scenario-card">
-    <h1>Scenario 3 — Crisis</h1>
+    <div class="scenario-card">
+      <h1>Scenario 3 — Crisis</h1>
 
-    <p>
-      Op een school dichtbij worden op één dag een tiental kinderen ziek.
-      De schooldirecteur neemt contact op met de GGD en de school wordt tot nader orde geloten.
-    </p>
+      <p>
+        Op een school dichtbij worden op één dag een tiental kinderen ziek.
+        De schooldirecteur neemt contact op met de GGD en de school wordt tot nader orde gesloten.
+      </p>
 
-    <p>
-      Intussen klinken vanuit het buitenland onthutsende berichten. Het H19N17-virus heeft een mortaliteitspercentage variërend van 4 tot wel 12%.
-      Zeer verontrustend is dat veel kinderen van 4 tot 10 jaar ziek worden en zelfs overlijden.
-      Ouders van zieke en niet-zieke kinderen bellen massaal met de huisarts.
-    </p>
+      <p>
+        Intussen klinken vanuit het buitenland onthutsende berichten. Het H19N17-virus heeft een mortaliteitspercentage variërend van 4 tot wel 12%.
+        Zeer verontrustend is dat veel kinderen van 4 tot 10 jaar ziek worden en zelfs overlijden.
+        Ouders van zieke en niet-zieke kinderen bellen massaal met de huisarts.
+      </p>
 
-    <p>
-      De zorg raakt overbelast: er zijn personeelstekorten (mede door isolatiemaatregelen bij besmet personeel)
-      en in verschillende ziekenhuizen is een tekort aan IC-bedden.
-    </p>
+      <p>
+        De zorg raakt overbelast: er zijn personeelstekorten (mede door isolatiemaatregelen bij besmet personeel)
+        en in verschillende ziekenhuizen is een tekort aan IC-bedden.
+      </p>
 
-    <p>
-      Het land verkeert, net als grote delen van de wereld, in crisis. Maatschappelijk heerst grote onrust.
-      Op straat breken rellen uit. De ME wordt ingezet om de orde te handhaven.
-    </p>
+      <p>
+        Het land verkeert, net als grote delen van de wereld, in crisis. Maatschappelijk heerst grote onrust.
+        Op straat breken rellen uit. De ME wordt ingezet om de orde te handhaven.
+      </p>
 
-    <p><em>Focus bij dit scenario: crisisbeheer.</em></p>
+      <p><em>Focus bij dit scenario: crisisbeheer.</em></p>
+    </div>
+
+    <div class="roles-card">
+      <p><strong>Kies je rol:</strong></p>
+
+      <button class="role-btn" onclick="window.location.href='huisarts.html'">Huisarts</button>
+      <button class="role-btn" onclick="window.location.href='hap.html'">HAP-arts</button>
+      <button class="role-btn" onclick="window.location.href='ziekenhuis.html'">Ziekenhuisarts</button>
+      <button class="role-btn" onclick="window.location.href='ggd.html'">Arts infectieziektenbestrijding</button>
+      <button class="spelleider-btn" onclick="window.location.href='factor_scenario3.html'">Factorkaarten voor de spelleider</button>
+    </div>
+
   </div>
 
-  <div class="roles-card">
-    <p><strong>Kies je rol:</strong></p>
-
-    <button class="role-btn" onclick="window.location.href='huisarts.html'">Huisarts</button>
-    <button class="role-btn" onclick="window.location.href='hap.html'">HAP-arts</button>
-    <button class="role-btn" onclick="window.location.href='ziekenhuis.html'">Ziekenhuisarts</button>
-    <button class="role-btn" onclick="window.location.href='ggd.html'">Arts infectieziektenbestrijding</button>
-    <button class="spelleider-btn" onclick="window.location.href='factor_scenario3.html'">
-      Factorkaarten voor de spelleider
-    </button>
+  <div class="nav-card">
+    <div class="back-row">
+      <button class="back-button" onclick="window.location.href='scenario2.html'">Terug naar scenario 2</button>
+      <button class="back-button" onclick="window.location.href='scenario4.html'">Door naar scenario 4</button>
+    </div>
   </div>
-
-</div>
-
-<div class="nav-card">
-  <div class="back-row">
-    <button class="back-button" onclick="window.location.href='scenario2.html'">Terug naar scenario 2</button>
-    <button class="back-button" onclick="window.location.href='scenario4.html'">Door naar scenario 4</button>
-  </div>
-</div>
 
 </body>
 </html>

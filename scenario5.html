@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scenario 5 — Het is voorbij</title>
+
   <style>
+    * { box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #f1dea3; /* zelfde warm zandgeel als Scenario 1 */
+      background-color: #f1dea3; /* warm zandgeel */
       margin: 0;
       padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 24px;
+      color: #333;
     }
 
- .main-row {
-  display: flex;
-  justify-content: center;   /* zet de inhoud in het midden */
-  width: 100%;
-}
-
+    .main-row {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1300px;
+    }
 
     /* Scenario-blok */
     .scenario-card {
@@ -33,10 +38,26 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
-   
+    h1 {
+      font-size: 22px;
+      margin: 0 0 20px 0;
+      text-align: left;
+    }
 
+    p {
+      text-align: left;
+      line-height: 1.5;
+      margin: 0 0 15px 0;
+    }
 
-       /* Navigatieblok */
+    ul {
+      text-align: left;
+      padding-left: 20px;
+      margin: 0 0 15px 0;
+      line-height: 1.4;
+    }
+
+    /* Navigatieblok */
     .nav-card {
       background: #f2b443;
       width: 850px;
@@ -64,52 +85,74 @@
       text-align: center;
     }
 
-    .back-button:hover {
-      background-color: #444444;
+    .back-button:hover { background-color: #444444; }
+
+    /* =========================
+       MOBIEL
+       ========================= */
+    @media (max-width: 900px) {
+      body {
+        padding: 18px 12px;
+        gap: 16px;
+      }
+
+      .scenario-card,
+      .nav-card {
+        width: 100%;
+      }
+
+      .back-row {
+        flex-direction: column;
+      }
+
+      .back-button {
+        min-height: 48px;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<div class="main-row">
+  <div class="main-row">
 
-  <!-- Scenario -->
-  <div class="scenario-card">
-    <h1>Scenario 5 — Het is voorbij</h1>
+    <div class="scenario-card">
+      <h1>Scenario 5 — Het is voorbij</h1>
 
-    <p>
-      Na twee jaar is er officieel een einde gekomen aan de pandemie. De vaccinatiegraad
-      is hoog. Het virus circuleert nog wel, maar op een laag niveau. De huidige varianten van het virus geven een milder klinisch beloop. 
-    </p>
+      <p>
+        Na twee jaar is er officieel een einde gekomen aan de pandemie. De vaccinatiegraad
+        is hoog. Het virus circuleert nog wel, maar op een laag niveau. De huidige varianten
+        van het virus geven een milder klinisch beloop.
+      </p>
 
-    <p>
-      De druk op de acute zorg is voorbij. Alle maatregelen zijn afgeschaald en afgeschaft.
-      Alleen de algemene adviezen over handen wassen, niezen in de elleboog en thuisblijven
-      bij ziekte blijven van toepassing.
-    </p>
+      <p>
+        De druk op de acute zorg is voorbij. Alle maatregelen zijn afgeschaald en afgeschaft.
+        Alleen de algemene adviezen over handen wassen, niezen in de elleboog en thuisblijven
+        bij ziekte blijven van toepassing.
+      </p>
 
-    <p><em>Focus bij dit scenario: evaluatie en herstel.</em></p>
+      <p><em>Focus bij dit scenario: evaluatie en herstel.</em></p>
 
-    <p>Bespreekpunten bij de evaluatie:</p>
+      <p>Bespreekpunten bij de evaluatie:</p>
 
-    <ul>
-      <li>Wat heb je geleerd over pandemieën?</li>
-      <li>Welke kenmerkende situaties komen in elke pandemie terug?</li>
-      <li>Wat zijn belangrijke inzichten over samenwerking en pandemieparaatheid?</li>
-      <li>Wat neem je mee naar de toekomst in je rol als huisarts?</li>
-    </ul>
+      <ul>
+        <li>Wat heb je geleerd over pandemieën?</li>
+        <li>Welke kenmerkende situaties komen in elke pandemie terug?</li>
+        <li>Wat zijn belangrijke inzichten over samenwerking en pandemieparaatheid?</li>
+        <li>Wat neem je mee naar de toekomst in je rol als huisarts?</li>
+      </ul>
+    </div>
+
   </div>
 
- 
-</div>
-
-<!-- Navigatie -->
-<div class="nav-card">
-  <div class="back-row">
-    <button class="back-button" onclick="window.location.href='scenario4.html'">Terug naar scenario 4</button>
-    <button class="back-button" onclick="window.location.href='index.html'">Terug naar startpagina</button>
+  <!-- Navigatie -->
+  <div class="nav-card">
+    <div class="back-row">
+      <button class="back-button" onclick="window.location.href='scenario4.html'">Terug naar scenario 4</button>
+      <button class="back-button" onclick="window.location.href='index.html'">Terug naar startpagina</button>
+    </div>
   </div>
-</div>
 
 </body>
 </html>
