@@ -1,10 +1,13 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scenario 1 — Factorkaarten</title>
-<style>
+
+  <style>
+    * { box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #dbe7f0;
@@ -16,40 +19,39 @@
       color: #333;
     }
 
-.intro-card {
-  background: #ffffff;
-  width: 100%;
-  max-width: 650px;  /* smaller blok */
-  padding: 28px 28px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  margin-bottom: 28px;
-  border-left: 6px solid #4a8fd1;
-}
-
-/* Zorgt dat tekst en afbeelding netjes blijven als de kaart smaller is */
-.intro-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-    .intro-text {
-      flex: 1;
+    .intro-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 650px;
+      padding: 28px 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 28px;
+      border-left: 6px solid #4a8fd1;
     }
+
+    .intro-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .intro-text { flex: 1; }
 
     .intro-title {
       font-size: 24px;
       margin-top: 0;
       margin-bottom: 10px;
+      text-align: left;
     }
 
     .intro-paragraph {
       font-size: 16px;
       line-height: 1.5;
       margin: 0;
+      text-align: left;
     }
 
     .intro-image {
@@ -99,142 +101,181 @@
       margin: 0;
       line-height: 1.5;
       font-size: 14px;
+      text-align: left;
     }
 
-  .nav-card {
+    .nav-card {
       margin-top: 30px;
-      padding: 14px 20px;
+      padding: 0;
       border-radius: 12px;
       width: 100%;
       max-width: 700px;
-      box-shadow: none; /* mag blijven of weg */
-}
-
+      box-shadow: none;
+    }
 
     .back-row {
       display: flex;
-   justify-content: center;
+      justify-content: center;
       gap: 12px;
     }
 
-    /* ✔️ jouw button-stijl (nu werkt hij weer!) */
-    button {
-        padding: 10px 15px;
+    /* Alleen de terugknop, niet alle buttons */
+    .back-button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4a8fd1;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      width: 200px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #3c7db5;
+    }
+
+    /* =========================
+       MOBIEL
+       ========================= */
+    @media (max-width: 700px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .intro-card {
+        padding: 18px;
+        margin-bottom: 18px;
+      }
+
+      .intro-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      .intro-paragraph {
         font-size: 16px;
-        cursor: pointer;
-        background-color: #4a8fd1;
-        border: none;
-        color: white;
-        border-radius: 8px;
-        width: 200px;
-        margin-top: 20px;
-    }
+      }
 
-    button:hover {
-        background-color: #3c7db5;
-    }
-</style>
+      .intro-image {
+        width: 70px;
+        margin-top: 10px;
+      }
 
+      .grid {
+        grid-template-columns: 1fr; /* 1 kolom op mobiel */
+        gap: 14px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .card p {
+        font-size: 15px; /* iets groter voor mobiel */
+      }
+
+      .back-row {
+        flex-direction: column;
+      }
+
+      .back-button {
+        width: 100%;
+        max-width: 420px;
+        min-height: 48px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Intro-blok -->
-<div class="intro-card">
-  <div class="intro-content">
-    <div class="intro-text">
-      <h1 class="intro-title">Scenario 1 — Factorkaarten</h1>
-      <p class="intro-paragraph">
-        Als het team het scenario heeft doorgespeeld, kun je het scenario veranderen met één of 
-        meer van onderstaande factorkaarten. <br> Kies zelf welke kaart je inzet, of gooi de dobbelsteen voor een willekeurige kaart.
+  <!-- Intro-blok -->
+  <div class="intro-card">
+    <div class="intro-content">
+      <div class="intro-text">
+        <h1 class="intro-title">Scenario 1 — Factorkaarten</h1>
+        <p class="intro-paragraph">
+          Als het team het scenario heeft doorgespeeld, kun je het scenario veranderen met één of
+          meer van onderstaande factorkaarten. <br>
+          Kies zelf welke kaart je inzet, of gooi de dobbelsteen voor een willekeurige kaart.
+        </p>
+      </div>
+      <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
+    </div>
+  </div>
+
+  <!-- Grid met 6 kaarten -->
+  <div class="grid">
+
+    <div class="card neg">
+      <div class="card-header"><span class="nr">1.</span> Mediahype</div>
+      <p>
+        In de media gaat het nergens anders meer over: de hele tijd zie en hoor je experts
+        over de mogelijke pandemie. Ook sociale gesprekken gaan alleen nog maar over
+        “de wereldgriep”.
       </p>
     </div>
-    <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
-  </div>
-</div>
 
-<!-- Grid met 6 kaarten -->
-<div class="grid">
-
-  <!-- Kaart 1 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">1.</span> Mediahype 
+    <div class="card pos">
+      <div class="card-header"><span class="nr">2.</span> Saamhorigheid</div>
+      <p>
+        Er is enorme saamhorigheid onder de zorgverleners. Iedereen is bereid over te
+        werken, elkaar te helpen en een stapje extra te doen.
+      </p>
     </div>
-    <p>
-      In de media gaat het nergens anders meer over: de hele tijd zie en hoor je experts
-      over de mogelijke pandemie. Ook sociale gesprekken gaan alleen nog maar over
-      “de wereldgriep”.
-    </p>
-  </div>
 
-  <!-- Kaart 2 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">2.</span> Saamhorigheid 
+    <div class="card pos">
+      <div class="card-header"><span class="nr">3.</span> Sneltest</div>
+      <p>
+        Er wordt een sneltest ontwikkeld om het virus te identificeren. De test is
+        vooralsnog alleen in microbiologische labs beschikbaar.
+      </p>
     </div>
-    <p>
-      Er is enorme saamhorigheid onder de zorgverleners. Iedereen is bereid over te
-      werken, elkaar te helpen en een stapje extra te doen.
-    </p>
-  </div>
 
-  <!-- Kaart 3 -->
-  <div class="card pos">
-    <div class="card-header">
-      <span class="nr">3.</span> Sneltest
+    <div class="card neg">
+      <div class="card-header"><span class="nr">4.</span> Discriminatie en desinformatie</div>
+      <p>
+        Er is sprake van discriminatie en agressie tegen mensen afkomstig uit uitbraakregio’s
+        van het virus. Tegelijkertijd verspreidt desinformatie zich snel over sociale media,
+        leidend tot wantrouwen naar de overheid. Hoe zie jij jouw rol in het omgaan met en
+        reageren op desinformatie?
+      </p>
     </div>
-    <p>
-      Er wordt een sneltest ontwikkeld om het virus te identificeren. De test is
-      vooralsnog alleen in microbiologische labs beschikbaar.
-    </p>
-  </div>
 
-  <!-- Kaart 4 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">4.</span> Discriminatie en desinformatie
+    <div class="card neg">
+      <div class="card-header"><span class="nr">5.</span> Verspreiding in omringende landen</div>
+      <p>
+        Het virus verspreidt zich snel in Europa. Nederland blijft nog gespaard, maar in
+        het Verenigd Koninkrijk en in Duitsland worden steeds meer gevallen gemeld.
+      </p>
     </div>
-    <p>
-      Er is sprake van discriminatie en agressie tegen mensen afkomstig uit uitbraakregio’s
-      van het virus. Tegelijkertijd verspreidt desinformatie zich snel over sociale media,
-      leidend tot wantrouwen naar de overheid. Hoe zie jij jouw rol in het omgaan met en
-      reageren op desinformatie?
-    </p>
-  </div>
 
-  <!-- Kaart 5 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">5.</span> Verspreiding in omringende landen
+    <div class="card neg">
+      <div class="card-header"><span class="nr">6.</span> Kwetsbaar team</div>
+      <p>
+        Je geeft leiding aan een onervaren team en je krijgt de bezetting nu al nauwelijks
+        rond. Hoe ga je daarmee om en hoe bereid je je team voor op een eventuele volgende fase in deze mogelijke pandemie?
+      </p>
     </div>
-    <p>
-      Het virus verspreidt zich snel in Europa. Nederland blijft nog gespaard, maar in
-      het Verenigd Koninkrijk en in Duitsland worden steeds meer gevallen gemeld.
-    </p>
+
   </div>
 
-  <!-- Kaart 6 -->
-  <div class="card neg">
-    <div class="card-header">
-      <span class="nr">6.</span> Kwetsbaar team
+  <!-- Navigatie -->
+  <div class="nav-card">
+    <div class="back-row">
+      <button class="back-button" onclick="window.location.href='scenario1.html'">
+        Terug naar scenario 1
+      </button>
     </div>
-    <p>
-      Je geeft leiding aan een onervaren team en je krijgt de bezetting nu al nauwelijks
-      rond. Hoe ga je daarmee om en hoe bereid je je team voor op een eventuele volgende fase in deze mogelijke pandemie?
-    </p>
   </div>
-
-</div>
-
-<!-- Navigatie -->
-<div class="nav-card">
-  <div class="back-row">
-    <button class="back-button" onclick="window.location.href='scenario1.html'">
-      Terug naar scenario 1
-    </button>
-
-  </div>
-</div>
 
 </body>
 </html>
