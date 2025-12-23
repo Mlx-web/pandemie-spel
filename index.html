@@ -14,8 +14,8 @@
       margin: 0;
       padding: 20px 0;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
     }
 
     .card {
@@ -53,6 +53,20 @@
     button:active {
       background-color: #3c7db5;
     }
+
+    .site-footer {
+      margin-top: 16px;
+      background: #ffffff;
+      width: 90%;
+      max-width: 350px;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      font-size: 0.75rem;
+      color: #555;
+text-align: left;
+      line-height: 1.4;
+    }
   </style>
 </head>
 
@@ -67,6 +81,13 @@
     <br><br>
     <button onclick="window.location.href='scenario1.html'">Start het spel</button>
   </div>
+
+  <footer class="site-footer" role="contentinfo">
+    © 2025 Huisartsopleiding Utrecht. Alle rechten voorbehouden.
+    Niets uit deze game/website mag worden verveelvoudigd, opgeslagen
+    of openbaar gemaakt zonder voorafgaande schriftelijke toestemming
+    van Huisartsopleiding Utrecht.
+  </footer>
 
 </body>
 </html>
