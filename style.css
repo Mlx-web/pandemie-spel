@@ -19,6 +19,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  animation: fadein 0.35s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* De kaart met inhoud (rollen) */

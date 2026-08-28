@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #dbe7f0;
@@ -18,6 +20,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      animation: fadein 0.35s ease;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .card {

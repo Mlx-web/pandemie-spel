@@ -19,11 +19,20 @@
         <h1 class="intro-title">Scenario 2 — Factorkaarten</h1>
         <p class="intro-paragraph">
           Als het team het scenario heeft doorgespeeld, kun je het scenario veranderen met één of
-          meer van onderstaande factorkaarten. Kies zelf welke kaart je inzet, of gooi de
+          meer van onderstaande factorkaarten. Kies zelf welke kaart je inzet, of klik op de
           dobbelsteen voor een willekeurige kaart.
         </p>
       </div>
-      <img src="dobbelsteen.png" alt="Dobbelsteen" class="intro-image">
+      <svg id="dice" class="intro-image" viewBox="0 0 100 100" role="button" tabindex="0" aria-label="Dobbelsteen — klik om een willekeurige factorkaart te kiezen">
+        <rect x="4" y="4" width="92" height="92" rx="18" fill="#fbfcfe" stroke="#c9d6e3" stroke-width="3"></rect>
+        <circle class="pip" data-pip="tl" cx="30" cy="30" r="9"></circle>
+        <circle class="pip" data-pip="tr" cx="70" cy="30" r="9"></circle>
+        <circle class="pip" data-pip="ml" cx="30" cy="50" r="9"></circle>
+        <circle class="pip" data-pip="mr" cx="70" cy="50" r="9"></circle>
+        <circle class="pip" data-pip="bl" cx="30" cy="70" r="9"></circle>
+        <circle class="pip" data-pip="br" cx="70" cy="70" r="9"></circle>
+        <circle class="pip" data-pip="c" cx="50" cy="50" r="9"></circle>
+      </svg>
     </div>
   </div>
 
@@ -83,5 +92,6 @@
     </div>
   </div>
 
+  <script src="factorkaarten.js"></script>
 </body>
 </html>
