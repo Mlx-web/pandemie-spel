@@ -52,6 +52,22 @@ body {
   border-left: 6px solid var(--accent);
 }
 
+/* Korte spelinstructie bovenaan scenario 1, voor wie de speluitleg oversloeg */
+.howto-box {
+  background: rgba(0,0,0,0.035);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.howto-box a {
+  color: var(--accent);
+  font-weight: bold;
+}
+
 .progress {
   font-size: 13px;
   font-weight: bold;
