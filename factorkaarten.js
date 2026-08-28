@@ -28,13 +28,19 @@ document.addEventListener('DOMContentLoaded', function () {
     rolling = true;
 
     dice.classList.add('rolling');
-    cards.forEach(function (card) { card.classList.remove('highlight'); });
+    cards.forEach(function (card) {
+      card.classList.remove('highlight');
+      card.classList.remove('dimmed');
+    });
 
     setTimeout(function () {
       dice.classList.remove('rolling');
       var index = Math.floor(Math.random() * cards.length);
       var pick = cards[index];
       setFace(index + 1);
+      cards.forEach(function (card) {
+        card.classList.toggle('dimmed', card !== pick);
+      });
       pick.classList.add('highlight');
       pick.scrollIntoView({ behavior: 'smooth', block: 'center' });
       rolling = false;

@@ -103,27 +103,6 @@ body {
 .stepper .step-4 { background-color: #e28b28; }
 .stepper .step-5 { background-color: #f2b443; }
 
-/* Afsluitbadge op scenario 5 */
-.completion-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #eaf7ea;
-  color: #2f7d33;
-  border: 1px solid #bfe6c0;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: bold;
-  margin: 0 0 16px 0;
-  animation: pop-in 0.5s cubic-bezier(.34,1.56,.64,1) 0.15s both;
-}
-
-@keyframes pop-in {
-  0% { opacity: 0; transform: scale(0.6); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
 /* Zachte overgang bij het laden van elke pagina */
 body {
   animation: fadein 0.35s ease;
