@@ -7,10 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     5: '#f2b443'
   };
 
-  var match = document.referrer.match(/scenario([1-5])\.html/);
-  if (!match) return;
+  var scenarioNr = new URLSearchParams(location.search).get('van');
 
-  var color = THEMES[match[1]];
+  if (!scenarioNr || !THEMES[scenarioNr]) {
+    var match = document.referrer.match(/scenario([1-5])(?:\.html)?(?:[/?#]|$)/);
+    scenarioNr = match ? match[1] : null;
+  }
+
+  var color = scenarioNr ? THEMES[scenarioNr] : null;
   var btn = document.querySelector('.nav-card button');
   if (btn && color) {
     btn.style.setProperty('--accent', color);
