@@ -1,0 +1,170 @@
+/* =========================
+   Gedeelde styling voor scenario1.html t/m scenario5.html
+   Kleurthema per scenario wordt gezet via CSS-variabelen
+   (--accent, --bg) in een klein <style>-blokje in elke pagina.
+   ========================= */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  color: #333;
+}
+
+.main-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1300px;
+}
+
+/* Scenario's zonder rollenkaart (bv. scenario 5) centreren de kaart */
+.main-row.single {
+  justify-content: center;
+}
+
+.scenario-card {
+  background: #f7f7f7;
+  border-left: 6px solid var(--accent);
+  width: 850px;
+  max-width: 100%;
+  padding: 24px 22px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.roles-card {
+  background: #f7f7f7;
+  width: 420px;
+  max-width: 100%;
+  padding: 18px 18px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 6px solid var(--accent);
+}
+
+.progress {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 8px 0;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+p {
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+
+ul {
+  text-align: left;
+  padding-left: 20px;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.roles-card p strong {
+  font-size: 16px;
+}
+
+/* Navigatie: rolknoppen, spelleiderknop, terugknoppen (allemaal <a>) */
+.role-btn,
+.spelleider-btn,
+.back-button {
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.role-btn { background-color: var(--accent); }
+.spelleider-btn { background-color: #555555; }
+
+.role-btn:hover,
+.role-btn:active,
+.spelleider-btn:hover,
+.spelleider-btn:active {
+  filter: brightness(0.88);
+}
+
+.nav-card {
+  background: var(--accent);
+  width: 850px;
+  max-width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.back-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.back-button {
+  flex: 1;
+  margin-top: 0;
+  background-color: #555555;
+}
+
+.back-button:hover,
+.back-button:active {
+  filter: brightness(0.88);
+}
+
+/* =========================
+   MOBIEL
+   ========================= */
+@media (max-width: 900px) {
+  body {
+    padding: 18px 12px;
+    gap: 16px;
+  }
+
+  .main-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .scenario-card,
+  .roles-card,
+  .nav-card {
+    width: 100%;
+  }
+
+  .role-btn,
+  .spelleider-btn,
+  .back-button {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  .back-row {
+    flex-direction: column;
+  }
+}

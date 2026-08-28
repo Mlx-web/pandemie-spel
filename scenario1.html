@@ -3,142 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Scenario 1 — Wordt het een pandemie?</title>
 
   <style>
-    * { box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1dea3;
-      margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      color: #333;
-    }
-
-    .main-row {
-      display: flex;
-      gap: 20px;
-      width: 100%;
-      max-width: 1300px;
-      align-items: flex-start;
-    }
-
-    .scenario-card {
-      background: #f7f7f7;
-      border-left: 6px solid #f2b443;
-      width: 850px;
-      max-width: 100%;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .roles-card {
-      background: #f7f7f7;
-      width: 420px;
-      max-width: 100%;
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-left: 6px solid #f2b443;
-    }
-
-    h1 {
-      font-size: 22px;
-      margin: 0 0 20px 0;
-    }
-
-    p {
-      line-height: 1.5;
-      margin: 0 0 15px 0;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin: 6px 0 0 0;
-      line-height: 1.4;
-    }
-
-    .role-btn,
-    .spelleider-btn {
-      display: block;
-      width: 100%;
-      padding: 10px 15px;
-      margin-top: 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 12px;
-      color: white;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .role-btn { background-color: #f2b443; }
-    .spelleider-btn { background-color: #555; }
-
-    /* ===== NAVIGATIEBALK ===== */
-
-    .nav-card {
-      background: #f2b443;
-      width: 850px;
-      max-width: 100%;
-      padding: 14px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .back-row {
-      display: flex;
-      gap: 10px;
-    }
-
-    .back-button {
-      flex: 1;
-      display: block;
-      background-color: #555;
-      color: white;
-      text-decoration: none;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .back-button:hover {
-      background-color: #444;
-    }
-
-    /* ===== MOBIEL ===== */
-
-    @media (max-width: 900px) {
-      body {
-        padding: 18px 12px;
-      }
-
-      .main-row {
-        flex-direction: column;
-      }
-
-      .scenario-card,
-      .roles-card,
-      .nav-card {
-        width: 100%;
-      }
-
-      .back-row {
-        flex-direction: column;
-      }
-
-      .back-button {
-        min-height: 48px;
-      }
-    }
+    :root { --accent: #f2b443; --bg: #f1dea3; }
   </style>
+  <link rel="stylesheet" href="scenario.css">
 </head>
 
 <body>
@@ -146,6 +18,7 @@
   <div class="main-row">
 
     <div class="scenario-card">
+      <p class="progress">Scenario 1 van 5</p>
       <h1>Scenario 1 — Wordt het een pandemie?</h1>
 
       <p>
@@ -178,11 +51,11 @@
     <div class="roles-card">
       <p><strong>Kies je rol:</strong></p>
 
-      <button class="role-btn" onclick="location.href='huisarts.html'">Huisarts</button>
-      <button class="role-btn" onclick="location.href='hap.html'">HAP-arts</button>
-      <button class="role-btn" onclick="location.href='ziekenhuis.html'">Ziekenhuisarts</button>
-      <button class="role-btn" onclick="location.href='ggd.html'">Arts infectieziektenbestrijding</button>
-      <button class="spelleider-btn" onclick="location.href='factor_scenario1.html'">Factorkaarten voor de spelleider</button>
+      <a class="role-btn" href="huisarts.html">Huisarts</a>
+      <a class="role-btn" href="hap.html">HAP-arts</a>
+      <a class="role-btn" href="ziekenhuis.html">Ziekenhuisarts</a>
+      <a class="role-btn" href="ggd.html">Arts infectieziektenbestrijding</a>
+      <a class="spelleider-btn" href="factor_scenario1.html">Factorkaarten voor de spelleider</a>
     </div>
 
   </div>

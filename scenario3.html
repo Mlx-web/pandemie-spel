@@ -3,152 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Scenario 3 — Crisis</title>
 
   <style>
-    * { box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0ac7c; /* warme oranje achtergrond */
-      margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      color: #333;
-    }
-
-    .main-row {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      align-items: flex-start;
-      width: 100%;
-      max-width: 1300px;
-    }
-
-    .scenario-card {
-      background: #f7f7f7;
-      border-left: 6px solid #d65b4f; /* warme roodtint */
-      width: 850px;
-      max-width: 100%;
-      padding: 24px 22px 22px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .roles-card {
-      background: #f7f7f7;
-      width: 420px;
-      max-width: 100%;
-      padding: 18px 18px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-left: 6px solid #d65b4f;
-    }
-
-    h1 {
-      font-size: 22px;
-      margin: 0 0 20px 0;
-      text-align: left;
-    }
-
-    p {
-      text-align: left;
-      line-height: 1.5;
-      margin: 0 0 15px 0;
-    }
-
-    ul {
-      text-align: left;
-      padding-left: 20px;
-      margin: 0 0 15px 0;
-      line-height: 1.4;
-    }
-
-    .role-btn,
-    .spelleider-btn {
-      display: block;
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      color: white;
-      border-radius: 12px;
-      width: 100%;
-      margin-top: 12px;
-      text-align: center;
-    }
-
-    .role-btn { background-color: #d65b4f; }
-    .role-btn:hover { background-color: #b0483f; }
-
-    .spelleider-btn { background-color: #555555; }
-    .spelleider-btn:hover { background-color: #444444; }
-
-    .nav-card {
-      background: #d65b4f;
-      width: 850px;
-      max-width: 100%;
-      padding: 14px 18px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .back-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .back-button {
-      flex: 1;
-      background-color: #555;
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      color: white;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .back-button:hover { background-color: #444; }
-
-    /* =========================
-       MOBIEL
-       ========================= */
-    @media (max-width: 900px) {
-      body {
-        padding: 18px 12px;
-        gap: 16px;
-      }
-
-      .main-row {
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      .scenario-card,
-      .roles-card,
-      .nav-card {
-        width: 100%;
-      }
-
-      .role-btn,
-      .spelleider-btn,
-      .back-button {
-        min-height: 48px;
-        font-size: 16px;
-      }
-
-      .back-row {
-        flex-direction: column;
-      }
-    }
+    :root { --accent: #d65b4f; --bg: #f0ac7c; }
   </style>
+  <link rel="stylesheet" href="scenario.css">
 </head>
 
 <body>
@@ -156,6 +18,7 @@
   <div class="main-row">
 
     <div class="scenario-card">
+      <p class="progress">Scenario 3 van 5</p>
       <h1>Scenario 3 — Crisis</h1>
 
       <p>
@@ -185,19 +48,19 @@
     <div class="roles-card">
       <p><strong>Kies je rol:</strong></p>
 
-      <button class="role-btn" onclick="window.location.href='huisarts.html'">Huisarts</button>
-      <button class="role-btn" onclick="window.location.href='hap.html'">HAP-arts</button>
-      <button class="role-btn" onclick="window.location.href='ziekenhuis.html'">Ziekenhuisarts</button>
-      <button class="role-btn" onclick="window.location.href='ggd.html'">Arts infectieziektenbestrijding</button>
-      <button class="spelleider-btn" onclick="window.location.href='factor_scenario3.html'">Factorkaarten voor de spelleider</button>
+      <a class="role-btn" href="huisarts.html">Huisarts</a>
+      <a class="role-btn" href="hap.html">HAP-arts</a>
+      <a class="role-btn" href="ziekenhuis.html">Ziekenhuisarts</a>
+      <a class="role-btn" href="ggd.html">Arts infectieziektenbestrijding</a>
+      <a class="spelleider-btn" href="factor_scenario3.html">Factorkaarten voor de spelleider</a>
     </div>
 
   </div>
 
   <div class="nav-card">
     <div class="back-row">
-      <button class="back-button" onclick="window.location.href='scenario2.html'">Terug naar scenario 2</button>
-      <button class="back-button" onclick="window.location.href='scenario4.html'">Door naar scenario 4</button>
+      <a class="back-button" href="scenario2.html">Terug naar scenario 2</a>
+      <a class="back-button" href="scenario4.html">Door naar scenario 4</a>
     </div>
   </div>
 

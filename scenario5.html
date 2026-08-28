@@ -3,121 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Scenario 5 — Het is voorbij</title>
 
   <style>
-    * { box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1dea3; /* warm zandgeel */
-      margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      color: #333;
-    }
-
-    .main-row {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      max-width: 1300px;
-    }
-
-    /* Scenario-blok */
-    .scenario-card {
-      background: #f7f7f7;
-      border-left: 6px solid #f2b443; /* geel accent */
-      width: 850px;
-      max-width: 100%;
-      padding: 24px 22px 22px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    h1 {
-      font-size: 22px;
-      margin: 0 0 20px 0;
-      text-align: left;
-    }
-
-    p {
-      text-align: left;
-      line-height: 1.5;
-      margin: 0 0 15px 0;
-    }
-
-    ul {
-      text-align: left;
-      padding-left: 20px;
-      margin: 0 0 15px 0;
-      line-height: 1.4;
-    }
-
-    /* Navigatieblok */
-    .nav-card {
-      background: #f2b443;
-      width: 850px;
-      max-width: 100%;
-      padding: 14px 18px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .back-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .back-button {
-      flex: 1;
-      background-color: #555555;
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      color: white;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .back-button:hover { background-color: #444444; }
-
-    /* =========================
-       MOBIEL
-       ========================= */
-    @media (max-width: 900px) {
-      body {
-        padding: 18px 12px;
-        gap: 16px;
-      }
-
-      .scenario-card,
-      .nav-card {
-        width: 100%;
-      }
-
-      .back-row {
-        flex-direction: column;
-      }
-
-      .back-button {
-        min-height: 48px;
-        font-size: 16px;
-      }
-    }
+    :root { --accent: #f2b443; --bg: #f1dea3; }
   </style>
+  <link rel="stylesheet" href="scenario.css">
 </head>
 
 <body>
 
-  <div class="main-row">
+  <div class="main-row single">
 
     <div class="scenario-card">
+      <p class="progress">Scenario 5 van 5</p>
       <h1>Scenario 5 — Het is voorbij</h1>
 
       <p>
@@ -149,8 +50,8 @@
   <!-- Navigatie -->
   <div class="nav-card">
     <div class="back-row">
-      <button class="back-button" onclick="window.location.href='scenario4.html'">Terug naar scenario 4</button>
-      <button class="back-button" onclick="window.location.href='index.html'">Terug naar startpagina</button>
+      <a class="back-button" href="scenario4.html">Terug naar scenario 4</a>
+      <a class="back-button" href="index.html">Terug naar startpagina</a>
     </div>
   </div>
 

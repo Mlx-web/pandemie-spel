@@ -1,0 +1,206 @@
+/* =========================
+   Gedeelde styling voor factor_scenario1.html t/m factor_scenario4.html
+   ========================= */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dbe7f0;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+.intro-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  padding: 28px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 28px;
+  border-left: 6px solid #4a8fd1;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.intro-text { flex: 1; }
+
+.intro-title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.intro-paragraph {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+.intro-image {
+  width: 90px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.card {
+  background: #f7f7f7;
+  padding: 18px 18px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 6px solid #cccccc;
+}
+
+.card-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-header span.nr {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.pos {
+  border-left-color: #6abf69;
+  background: #f1faf1;
+}
+
+.neg {
+  border-left-color: #d65b4f;
+  background: #fff5f4;
+}
+
+/* Niet alleen kleur: ook een +/- teken, zodat het onderscheid
+   ook zonder kleurwaarneming (bv. kleurenblindheid) te zien is. */
+.pos .card-header::before {
+  content: "+ ";
+  color: #2f7d33;
+  font-weight: bold;
+}
+
+.neg .card-header::before {
+  content: "\2212 "; /* minteken */
+  color: #a83a2f;
+  font-weight: bold;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  text-align: left;
+}
+
+.nav-card {
+  margin-top: 30px;
+  padding: 0;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: none;
+}
+
+.back-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Alleen de terugknop, niet alle buttons */
+.back-button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4a8fd1;
+  border: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 200px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #3c7db5;
+}
+
+/* =========================
+   MOBIEL
+   ========================= */
+@media (max-width: 700px) {
+  body {
+    padding: 18px 12px;
+  }
+
+  .intro-card {
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .intro-paragraph {
+    font-size: 16px;
+  }
+
+  .intro-image {
+    width: 70px;
+    margin-top: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* 1 kolom op mobiel */
+    gap: 14px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card p {
+    font-size: 15px; /* iets groter voor mobiel */
+  }
+
+  .back-row {
+    flex-direction: column;
+  }
+
+  .back-button {
+    width: 100%;
+    max-width: 420px;
+    min-height: 48px;
+  }
+}

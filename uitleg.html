@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Speluitleg</title>
 
   <style>
@@ -105,7 +107,8 @@
       font-weight: bold;
     }
 
-    button {
+    .btn {
+      display: block;
       width: 100%;
       max-width: 320px;
       padding: 14px 16px;
@@ -114,11 +117,14 @@
       background-color: #4a8fd1;
       border: none;
       color: white;
+      text-decoration: none;
+      text-align: center;
       border-radius: 10px;
       margin: 10px 0 6px;
     }
 
-    button:active {
+    .btn:hover,
+    .btn:active {
       background-color: #3c7db5;
     }
 
@@ -128,7 +134,7 @@
       .main-info { padding: 14px; }
       .main-info img { width: 74px; }
       .main-info h1 { font-size: 21px; }
-      button { font-size: 18px; }
+      .btn { font-size: 18px; }
     }
   </style>
 </head>
@@ -136,7 +142,7 @@
 <body>
 
   <div class="main-info">
-    <img src="afb1virus.png" alt="Virus">
+    <img src="afb1virus.jpg" alt="Virus">
     <div>
       <h1>Speluitleg</h1>
       <p>
@@ -184,7 +190,7 @@
 
   </div>
 
-  <button onclick="window.location.href='index.html'">Terug naar start</button>
+  <a class="btn" href="index.html">Terug naar start</a>
 
 </body>
 </html>

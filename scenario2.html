@@ -3,166 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Scenario 2 — De pandemie is een feit</title>
 
   <style>
-    * { box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5cfa3;
-      margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      color: #333;
-    }
-
-    /* Scenario links, rollen rechts (desktop) */
-    .main-row {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      align-items: flex-start;
-      width: 100%;
-      max-width: 1300px;
-    }
-
-    /* Scenario-blok */
-    .scenario-card {
-      background: #f7f7f7;
-      border-left: 6px solid #e28b28; /* oranje accent */
-      width: 850px;
-      max-width: 100%;
-      padding: 24px 22px 22px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    /* Rollenkaart */
-    .roles-card {
-      background: #f7f7f7;
-      width: 420px;
-      max-width: 100%;
-      padding: 18px 18px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-left: 6px solid #e28b28;
-    }
-
-    h1 {
-      font-size: 22px;
-      margin: 0 0 20px 0;
-      text-align: left;
-    }
-
-    p {
-      text-align: left;
-      line-height: 1.5;
-      margin: 0 0 15px 0;
-    }
-
-    ul {
-      text-align: left;
-      padding-left: 20px;
-      margin: 6px 0 0 0;
-      line-height: 1.4;
-    }
-
-    .roles-card p strong {
-      font-size: 16px;
-    }
-
-    /* Knoppen */
-    .role-btn,
-    .spelleider-btn {
-      display: block;
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      color: white;
-      border-radius: 12px;
-      width: 100%;
-      margin-top: 12px;
-      text-align: center;
-    }
-
-    .role-btn { background-color: #e28b28; }
-    .role-btn:hover { background-color: #b96d20; }
-
-    .spelleider-btn { background-color: #555555; }
-    .spelleider-btn:hover { background-color: #444444; }
-
-    /* Casusdefinitie (netjes zonder inline styles) */
-    .case-title {
-      margin-bottom: 4px;
-    }
-
-    /* Navigatieblok */
-    .nav-card {
-      background: #e28b28;
-      width: 850px;
-      max-width: 100%;
-      padding: 14px 18px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .back-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .back-button {
-      flex: 1;
-      background-color: #555;
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      color: white;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .back-button:hover { background-color: #444; }
-
-    /* =========================
-       MOBIEL
-       ========================= */
-    @media (max-width: 900px) {
-      body {
-        padding: 18px 12px;
-        gap: 16px;
-      }
-
-      .main-row {
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      .scenario-card,
-      .roles-card,
-      .nav-card {
-        width: 100%;
-      }
-
-      .role-btn,
-      .spelleider-btn,
-      .back-button {
-        min-height: 48px;
-        font-size: 16px;
-      }
-
-      .back-row {
-        flex-direction: column;
-      }
-    }
+    :root { --accent: #e28b28; --bg: #f5cfa3; }
   </style>
+  <link rel="stylesheet" href="scenario.css">
 </head>
 
 <body>
@@ -172,6 +20,7 @@
 
     <!-- Scenario -->
     <div class="scenario-card">
+      <p class="progress">Scenario 2 van 5</p>
       <h1>Scenario 2 — De pandemie is een feit</h1>
 
       <p>
@@ -198,11 +47,11 @@
     <div class="roles-card">
       <p><strong>Kies je rol:</strong></p>
 
-      <button class="role-btn" onclick="window.location.href='huisarts.html'">Huisarts</button>
-      <button class="role-btn" onclick="window.location.href='hap.html'">HAP-arts</button>
-      <button class="role-btn" onclick="window.location.href='ziekenhuis.html'">Ziekenhuisarts</button>
-      <button class="role-btn" onclick="window.location.href='ggd.html'">Arts infectieziektenbestrijding</button>
-      <button class="spelleider-btn" onclick="window.location.href='factor_scenario2.html'">Factorkaarten voor de spelleider</button>
+      <a class="role-btn" href="huisarts.html">Huisarts</a>
+      <a class="role-btn" href="hap.html">HAP-arts</a>
+      <a class="role-btn" href="ziekenhuis.html">Ziekenhuisarts</a>
+      <a class="role-btn" href="ggd.html">Arts infectieziektenbestrijding</a>
+      <a class="spelleider-btn" href="factor_scenario2.html">Factorkaarten voor de spelleider</a>
     </div>
 
   </div>
@@ -210,8 +59,8 @@
   <!-- Navigatie -->
   <div class="nav-card">
     <div class="back-row">
-      <button class="back-button" onclick="window.location.href='scenario1.html'">Terug naar scenario 1</button>
-      <button class="back-button" onclick="window.location.href='scenario3.html'">Door naar scenario 3</button>
+      <a class="back-button" href="scenario1.html">Terug naar scenario 1</a>
+      <a class="back-button" href="scenario3.html">Door naar scenario 3</a>
     </div>
   </div>
 
